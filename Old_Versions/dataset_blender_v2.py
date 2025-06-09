@@ -27,11 +27,7 @@ def add_subparser(subparsers):
         add_subparser:: ArgParse -> ArgParse
         Add asubparser for command line switches need for this very module to run properly
         An additional "--test" command line switch allows to perform doctest tests from the main program for this module
-    """
-    from library.file_checks    import check_file_arg
-    is_reachable = lambda s: check_file_arg(                                    # lambda for file checking
-                 argparse.ArgumentTypeError(f"'{s}' no encontrado o accesible!")# exception to raise
-                ,Path(s))                                                       # Path to check
+    """                                                   
 
     command_parser              = subparsers.add_parser(command_name, description = command_description)
     ### Additional command line arguments needed for this puzzle like data files etc..
