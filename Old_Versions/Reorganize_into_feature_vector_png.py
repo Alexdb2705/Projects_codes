@@ -3,8 +3,8 @@ import shutil
 import numpy as np
 
 # Origin and output path
-base_path = 'C:/Users/Diego/Desktop/N101/Datasets/Regression'  # Change this path to your origin folder
-output_path = 'C:/Users/Diego/Desktop/N101/Datasets/Classification'  # Change this path to your output folder
+base_path = ""  # Change this path to your origin folder
+output_path = ""  # Change this path to your output folder
 
 # Obtain the list of STL folders
 stl_folders = [f for f in os.listdir(base_path) if os.path.isdir(os.path.join(base_path, f))]
