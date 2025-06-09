@@ -18,7 +18,7 @@ def cartesian_to_spherical(x, y, z):
         phi += 2 * np.pi  # Ensure phi is in (0, 2pi)
     return theta, phi
 
-def generate_spherical_coordinates_file(n, angle, width, m, pov, cone_width, filename):
+def generate_spherical_coordinates_file(n, angle, width, m, cone_width, filename, pov=None):
     """Generates a text file with n samples of random spherical coordinates and additional variations.
 
     Each sample consists of a random unit direction in spherical coordinates. Additional directions 
@@ -34,27 +34,23 @@ def generate_spherical_coordinates_file(n, angle, width, m, pov, cone_width, fil
         filename (str, optional): Output file name.
     """
 
+    def pov_angles(pov, cw):
+        povs = {"front": (90, 0), "left_side": (90, 90), "right_side": (90, 270), "back": (90, 180)}
+        general = cw * (np.random.rand() * 2 - 1)
+        return (general + povs[pov][0]) * np.pi/180, (general + povs[pov][1]) * np.pi/180
+
     width = np.radians(width)  # Convert width from degrees to radians
     
     with open(filename, "w") as f:
-        cuant = 0
-        # print('pov, cw:', pov, cone_width)
         for _ in range(n):
-            if pov == "front":  # Positive x axis
-                theta, phi = (1+0.00001*cuant)*np.random.randint(low=90-cone_width, high=90+cone_width)*np.pi/180, (1+0.00001*cuant)*np.random.randint(low=0-cone_width, high=0+cone_width)*np.pi/180 
-            elif pov == "left_side": # Positive y axis
-                theta, phi = (1+0.00001*cuant)*np.random.randint(low=90-cone_width, high=90+cone_width)*np.pi/180, (1+0.00001*cuant)*np.random.randint(low=90-cone_width, high=90+cone_width)*np.pi/180
-            elif pov == "right_side": # Negative y axis
-                theta, phi = (1+0.00001*cuant)*np.random.randint(low=90-cone_width, high=90+cone_width)*np.pi/180, (1+0.00001*cuant)*np.random.randint(low=270-cone_width, high=270+cone_width)*np.pi/180
-            elif pov == "back": # Negative x axis
-                theta, phi = (1+0.00001*cuant)*np.random.randint(low=90-cone_width, high=90+cone_width)*np.pi/180, (1+0.00001*cuant)*np.random.randint(low=180-cone_width, high=180+cone_width)*np.pi/180
+            if pov:  # Positive x axis
+                theta, phi = pov_angles(pov, cone_width)
             else:
                 # Generate a single random unit vector
-                # print("No pov was set.")
                 v = np.random.randn(3)
                 v /= np.linalg.norm(v)
                 theta, phi = cartesian_to_spherical(*v)
-            cuant += 1
+            
             # Generate additional directions centered on theta|phi
             if angle == "theta":
                 values = np.linspace(theta - width, theta + width, m)

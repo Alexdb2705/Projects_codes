@@ -3,65 +3,121 @@ import shutil
 import numpy as np
 import glob
 from random import shuffle
+import json
 
-def reorganization(samples_per_stl, nf, nd, datasets_path):
+def reorganization(scan_angle, nr_dictionary, nf, nd, datasets_path):
     # Origin and output path
     base_path = os.path.join(datasets_path, f"Raw/Samples_{nf}_f_{nd}_d")  # Path to folder where separated datasets are stored
-    output_path = os.path.join(datasets_path, f"Reorganized/Classification_{samples_per_stl}_{nf}_f_{nd}_d")  # Path to folder where reorganized dataset will be saved
-    labels_path = os.path.join(datasets_path, "Reorganized/Labels_vector")  # Path to folder where labels_vectors are stored
+
+    total_samples = 0
+    for i in nr_dictionary.values():
+        total_samples += (i[1] - i[0])
+        
+    for c in range(20):
+        if os.path.exists(os.path.join(datasets_path, f"Reorganized/Classification_{total_samples}_{c}_{nf}_f_{nd}_d")):
+            pass
+        else:
+            output_path = os.path.join(datasets_path, f"Reorganized/Classification_{total_samples}_{c}_{nf}_f_{nd}_d")
+            os.makedirs(output_path, exist_ok=True)
+            break
+    assert c<20 , "Error in folder creation"
+
+    with open(os.path.join(output_path, f"dictionary_{total_samples}_{c}_{nf}_f_{nd}_d.json"), 'w') as json_file:
+        json.dump(nr_dictionary, json_file)
 
     # Obtain the list of STL folders
     stl_folders = []
-    for root, dirs, files in os.walk(base_path):
-        if any(file.endswith(".npy") for file in files):
-            stl_folders.append(root.split('/')[-1])
-    print("stls",stl_folders)
-    # If a folder with the exact same name or path exists, deletes it and creates a new empty folder with that name
-    if os.path.exists(output_path):
-        shutil.rmtree(output_path)
-    os.makedirs(output_path, exist_ok=True)
+    for g_name in nr_dictionary.keys():
+        stl_folders.append(g_name)
 
     existing_files = len(glob.glob(os.path.join(output_path, "sample_*")))
-    num_stls = len(stl_folders)
-    # existing_files_per_stl = int((existing_files) / num_stls)
+
 
     # Initialize variables
-    total_samples = num_stls * samples_per_stl
-    # label_vector = np.zeros(total_samples + existing_files, dtype=int)
     label_vector = np.zeros(total_samples, dtype=int)
-    # if existing_files >= 1:
-    #     label_vector_old = np.load(os.path.join(labels_path,f"labels_vector_{samples_per_stl}_{nf}_f_{nd}_d.npy"))
-    #     label_vector[:existing_files] = label_vector_old
+
+    def files_sorted(path, ending):
+        names = glob.glob(os.path.join(path, f"*{ending}"))
+        names.sort(key=lambda x: int(os.path.basename(x).split('_')[1]))
+        return names
 
     # Process every STL folder
-    for stl_index, stl_folder in enumerate(stl_folders):
-        stl_path = os.path.join(base_path, stl_folder)
+    for stl_index, stl_name in enumerate(stl_folders):
+        stl_path = os.path.join(base_path, stl_name)
         
         # Obtain the first samples_per_stl files sorted by name
-        source_files = sorted(glob.glob(os.path.join(stl_path, "*.npy")))[:samples_per_stl]
+        source_files_isar = files_sorted(stl_path, "fft.npy")[nr_dictionary[stl_name][0]:nr_dictionary[stl_name][1]]
+        source_files_npy = files_sorted(stl_path, f"{scan_angle[0].upper()}.npy")[nr_dictionary[stl_name][0]:nr_dictionary[stl_name][1]]
+        source_files_png = files_sorted(stl_path, f"{scan_angle[0].upper()}.png")[nr_dictionary[stl_name][0]:nr_dictionary[stl_name][1]]
+        source_files_perfil = files_sorted(stl_path, "perfil.npy")[nr_dictionary[stl_name][0]:nr_dictionary[stl_name][1]]
+        source_files_perfil_png = files_sorted(stl_path, "perfil.png")[nr_dictionary[stl_name][0]:nr_dictionary[stl_name][1]]
+        source_files_field_npy = files_sorted(stl_path, "field.npy")[nr_dictionary[stl_name][0]:nr_dictionary[stl_name][1]]
+        source_files_field_amp_png = files_sorted(stl_path, "amp.png")[nr_dictionary[stl_name][0]:nr_dictionary[stl_name][1]]
+        source_files_field_ph_png = files_sorted(stl_path, "ph.png")[nr_dictionary[stl_name][0]:nr_dictionary[stl_name][1]]
+        source_files_field_amp_npy = files_sorted(stl_path, "amp.npy")[nr_dictionary[stl_name][0]:nr_dictionary[stl_name][1]]
+        source_files_field_ph_npy = files_sorted(stl_path, "ph.npy")[nr_dictionary[stl_name][0]:nr_dictionary[stl_name][1]]
 
         start_index = existing_files
-        end_index = samples_per_stl + existing_files
+        end_index = nr_dictionary[stl_name][1] - nr_dictionary[stl_name][0] + existing_files
         label_vector[start_index:end_index] = stl_index
-        
+
         # Copy files
-        for file in source_files:
+        for file in range(len(source_files_npy)):
             
             # Generate the name for the output file
-            name_parts = file.split('_')
-            dst_file = os.path.join(output_path, f"sample_{existing_files+1}_{name_parts[-2]}_{name_parts[-1]}")
+            dst_file_npy = os.path.join(output_path, f"sample_{existing_files+1}.npy")
+            dst_file_isar = os.path.join(output_path, f"sample_{existing_files+1}_fft.npy")
+            dst_file_png = os.path.join(output_path, f"sample_{existing_files+1}.png")
+            dst_file_perfil = os.path.join(output_path, f"sample_{existing_files+1}_fft_perfil.npy")
+            dst_file_perfil_png = os.path.join(output_path, f"sample_{existing_files+1}_perfil.png")
+            dst_file_field_npy = os.path.join(output_path, f"sample_{existing_files+1}_field.npy")
+            dst_file_field_amp_png = os.path.join(output_path, f"sample_{existing_files+1}_field_amp.png")
+            dst_file_field_ph_png = os.path.join(output_path, f"sample_{existing_files+1}_field_ph.png")
+            dst_file_field_amp_npy = os.path.join(output_path, f"sample_{existing_files+1}_field_amp.npy")
+            dst_file_field_ph_npy = os.path.join(output_path, f"sample_{existing_files+1}_field_ph.npy")
 
             # Copy file
-            shutil.copy(file, dst_file)
+            shutil.copy(source_files_npy[file], dst_file_npy)
+            shutil.copy(source_files_isar[file], dst_file_isar)
+            shutil.copy(source_files_png[file], dst_file_png)
+            shutil.copy(source_files_perfil[file], dst_file_perfil)
+            shutil.copy(source_files_perfil_png[file], dst_file_perfil_png)
+            shutil.copy(source_files_field_npy[file], dst_file_field_npy)
+            shutil.copy(source_files_field_amp_png[file], dst_file_field_amp_png)
+            shutil.copy(source_files_field_ph_png[file], dst_file_field_ph_png)
+            shutil.copy(source_files_field_amp_npy[file], dst_file_field_amp_npy)
+            shutil.copy(source_files_field_ph_npy[file], dst_file_field_ph_npy)
             existing_files += 1
 
     # Save the vector as a .csv file
-    output_csv = os.path.join(labels_path, f"labels_vector_{samples_per_stl}_{nf}_f_{nd}_d.csv")
+    output_csv = os.path.join(output_path, f"labels_vector_{total_samples}_{c}_{nf}_f_{nd}_d.csv")
     np.savetxt(output_csv, label_vector, delimiter=",", fmt="%d")
 
     # Save the vector as a .npy file
-    output_npy = os.path.join(labels_path, f"labels_vector_{samples_per_stl}_{nf}_f_{nd}_d.npy")
+    output_npy = os.path.join(output_path, f"labels_vector_{total_samples}_{c}_{nf}_f_{nd}_d.npy")
     np.save(output_npy, label_vector)
 
     print(f"Vector de etiquetas guardado en {output_csv} y {output_npy}")
-    print("Consolidación completada.")
+    print("\nConsolidación completada.")
+
+def multiple_reorganization(nr_list, g_list):
+    assert len(nr_list) == 2*len(g_list) or len(nr_list) == len(g_list) or len(nr_list) == 1 or len(nr_list) == 2, "Error in multiple reorganization"
+    nr_dict = {}
+
+    if len(nr_list) == 2*len(g_list):
+        for i in range(len(g_list)):
+            nr_dict[g_list[i]] = (nr_list[2*i], nr_list[2*i+1])
+        return nr_dict
+    elif len(nr_list) == len(g_list):
+        for i in range(len(g_list)):
+            nr_dict[g_list[i]] = (0, nr_list[i])
+        return nr_dict
+    elif len(nr_list) == 1:
+        for i in range(len(g_list)):
+            nr_dict[g_list[i]] = (0, nr_list[0])
+        return nr_dict
+    elif len(nr_list) == 2:
+        for i in range(len(g_list)):
+            nr_dict[g_list[i]] = (nr_list[0], nr_list[1])
+        return nr_dict
+
