@@ -105,10 +105,10 @@ transform = transforms.Compose([
 
 # Crear el dataset personalizado
 dataset = CustomDataset(
-    img1_dir='/Img/Img_axis_x', 
-    img2_dir='/Img/Img_axis_y', 
-    img3_dir='/Img/Img_axis_z',
-    coords_file='/Img/coords.csv',
+    img1_dir='C:\Program Files\Blender Foundation\Blender 3.6\Img\Img_axis_x', 
+    img2_dir='C:\Program Files\Blender Foundation\Blender 3.6\Img\Img_axis_y', 
+    img3_dir='C:\Program Files\Blender Foundation\Blender 3.6\Img\Img_axis_z',
+    coords_file='C:\Program Files\Blender Foundation\Blender 3.6\Img\coords.csv',
     transform=transform
 )
 

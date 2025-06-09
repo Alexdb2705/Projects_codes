@@ -1,6 +1,7 @@
 """
     Datasets generation tool
 
+    - Oct 2024 Ángel álvarez. First version, main code and example module.
 
 """
 import sys
@@ -26,7 +27,7 @@ comandos = {
         cmd_ex         : cmd_ex.command_description
         }
 
-description = 'Generador de Datasets'
+description = 'Generador de Datasets, @2024 Grupo de Electromagnetismo Computacional'
 
 def main(args):
     """
@@ -75,7 +76,7 @@ def comando(module, args, test = False):
         Commands module runner
         Run the given module using the namespace parsed form command line switches
     """
-    edition     = '#GenDat'
+    edition     = '#GenDat2024 V0.1 (CodeName: Johny Five)'
     start       = timer()
     try:
         print(f"{description} {edition}\n")
