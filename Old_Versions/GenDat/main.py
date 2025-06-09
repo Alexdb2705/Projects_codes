@@ -1,8 +1,6 @@
 """
     Datasets generation tool
 
-    - Oct 2024 Ángel álvarez. First version, main code and example module.
-
 """
 import sys
 import argparse
@@ -27,7 +25,7 @@ comandos = {
         cmd_ex         : cmd_ex.command_description
         }
 
-description = 'Generador de Datasets, @2024 Grupo de Electromagnetismo Computacional'
+description = 'Generador de Datasets'
 
 def main(args):
     """
