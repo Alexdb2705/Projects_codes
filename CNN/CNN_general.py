@@ -20,10 +20,10 @@ from datetime import datetime
 from torcheval.metrics.functional import multiclass_confusion_matrix
 import json
 
-# Obtener la fecha y hora actual
+# Getting day and time
 actual_time = datetime.now()
 
-# Obtener el usuario y establecer en consecuencia path y gpu correspondientes
+# Getting the user and setting the path and gpu correctly
 userPath = os.getcwd().split('/')[2]
 cuda_own = "cuda:0"
 if userPath == "newfasant2":
@@ -57,6 +57,7 @@ device = (
     else "cpu"
          )
 
+# Setting the seed to be used in every part of the code
 seed= 10 #89, #10, 102, 103, 104, 1005, 100005 works
 
 torch.manual_seed(seed)
@@ -87,48 +88,50 @@ class CustomDataset(Dataset):
             self.file_names = [f for f in os.listdir(dir) if f.endswith('.npy') and f.startswith('sample_') and not f.endswith('fft.npy') and not f.endswith('perfil.npy') and not f.endswith('field.npy') and not f.endswith('field_amp.npy') and not f.endswith('field_ph.npy')]
             self.transform = transform_npy
         elif args.data_type == 'fft':
-            # List all .npy files in the directory.
+            # List all fft files in the directory.
             self.file_names = [f for f in os.listdir(dir) if f.endswith('fft.npy')]
             self.transform = transform_npy
         elif args.data_type == 'fft_perfil':
-            # List all .npy files in the directory.
+            # List all fft (in profiles) files in the directory.
             self.file_names = [f for f in os.listdir(dir) if f.endswith('perfil.npy')]
             self.transform = transform_npy
         elif args.data_type == 'field':
-            # List all .npy files in the directory.
+            # List all field files in the directory.
             self.file_names = [f for f in os.listdir(dir) if f.endswith('field.npy')]
             self.transform = transform_npy
         elif args.data_type == 'field_amp_npy':
-            # List all .npy files in the directory.
+            # List all files containing the amplitude of the field in the directory.
             self.file_names = [f for f in os.listdir(dir) if f.endswith('field_amp.npy')]
             self.transform = transform_npy
         elif args.data_type == 'field_ph_npy':
-            # List all .npy files in the directory.
+            # List all files containing the complex phase of the field in the directory.
             self.file_names = [f for f in os.listdir(dir) if f.endswith('field_ph.npy')]
             self.transform = transform_npy
         elif args.data_type == 'perfil_png':
-            # List all .npy files in the directory.
+            # List all the images plotting the fft (in profiles) in the directory.
             self.file_names = [f for f in os.listdir(dir) if f.endswith('perfil.png')]
             self.transform = transform_ISAR
         elif args.data_type == 'field_amp_png':
-            # List all .npy files in the directory.
+            # List all the images plotting the amplitude of the field in the directory.
             self.file_names = [f for f in os.listdir(dir) if f.endswith('amp.png')]
             self.transform = transform_ISAR
         elif args.data_type == 'field_ph_png':
-            # List all .npy files in the directory.
+            # List all the images plotting the complex phase of the field in the directory.
             self.file_names = [f for f in os.listdir(dir) if f.endswith('ph.png')]
             self.transform = transform_ISAR
         elif args.data_type == 'ISAR':
-            # List all .npy files in the directory.
+            # List all the ISAR images in the directory.
             self.file_names = [f for f in os.listdir(dir) if f.endswith('.png') and not f.endswith('perfil.png') and not f.endswith('amp.png') and not f.endswith('ph.png')]
             self.transform = transform_ISAR
             
         if args.use_case == "Classification":
-            _, _, result = dir.split('/')[-1].partition('_')  # divide en 3 partes: antes, separador, después
+            # The network must say which of the geometries corresponds to a particular input
+            _, _, result = dir.split('/')[-1].partition('_')  # Divides in 3 parts: before, splitter and after
             result = f"_{result}"
             # Load labels vector from the labels file.
             self.labels_vector = np.load(dir + '/labels_vector' + result + '.npy')
         elif args.use_case == "Regression":
+            # The network must output the coordinates of the object of a particular input
             self.coords = np.load(dir + "/coords.npy")[:, 1:]
             self.dist_max = self.dist_max_calc()
             
@@ -156,9 +159,10 @@ class CustomDataset(Dataset):
             # Convert the numpy array to a PyTorch tensor.
             data = torch.tensor(data, dtype=torch.float32).to(device)
         elif args.data_type == 'ISAR' or args.data_type == 'perfil_png' or args.data_type == 'field_amp_png' or args.data_type == 'field_ph_png':
+            # Load the image and convert it to "L"
             data = Image.open(file_path).convert("L")
             
-            # Aplicar transformaciones si las hay
+            # If a transform is set, apply it
             if self.transform:
                 data = self.transform(data).to(device)
             else:
@@ -168,11 +172,13 @@ class CustomDataset(Dataset):
             # Load labels vector from the labels file.
             target = torch.tensor(self.labels_vector[idx], dtype=torch.float32).to(device)
         elif args.use_case == "Regression":
+            # Load coordinates from the coords matrix file.
             target = torch.tensor(self.coords[idx,:], dtype=torch.float32).to(device)
         
         return data, target
     
     def dist_max_calc(self):
+        # Returns maximux size of the coordinates vector of the points
         sample_coords = self.coords[1].reshape(int(self.coords.shape[1]/3),3)
         dist_max = 0.0
         for i in range(len(sample_coords)):
@@ -187,12 +193,12 @@ class CNNModule(nn.Module):
     This network processes an input tensor with shape (batch_size, 2, height, width)
     and returns a flattened feature vector.
     """
-    # La red LSTM podria usarse para relacionar columnas o filas del npy entre sí
 
     def __init__(self):
         super(CNNModule, self).__init__()
         
-        # # Capas convolucionales
+        # Setting the neural networks layers
+        # Convolution
         self.conv1 = nn.LazyConv2d(out_channels=96, kernel_size=3, stride=1, padding=1)
         self.pool1 = nn.MaxPool2d(kernel_size=2, stride=2)
         self.conv2 = nn.LazyConv2d(256, kernel_size=3, padding=1)
@@ -200,11 +206,14 @@ class CNNModule(nn.Module):
         self.conv3 = nn.LazyConv2d(384, kernel_size=3, padding=1)
         self.conv4 = nn.LazyConv2d(384, kernel_size=3, padding=1)
         self.conv5 = nn.LazyConv2d(256, kernel_size=3, padding=1)
+        # Pooling
         self.pool3 = nn.MaxPool2d(kernel_size=2, stride=2)
+        # ReLu and flattening
         self.ReLU = nn.ReLU()
         self.Flatten = nn.Flatten()
 
     def forward(self, x):
+        # Applying the layers in the correct order
         x = self.conv1(x)
         x = self.ReLU(x)
         x = self.pool1(x)
@@ -231,12 +240,12 @@ class GeometryPredictor(nn.Module):
 
         # Fully connected layers
         self.fc1 = nn.LazyLinear(4096)  # Adjust size if needed.
-        self.fc2 = nn.LazyLinear(4096)
+        self.fc2 = nn.LazyLinear(4096)  #
         
         if args.use_case == "Classification":
             self.fc3 = nn.LazyLinear(num_labels)  # Number of outputs equal to num_labels.
         if args.use_case == "Regression":
-            self.fc3 = nn.LazyLinear(coords_width)  # 3*N salidas, una por coordenada (x, y, z) de cada uno de los N vertices
+            self.fc3 = nn.LazyLinear(coords_width)  # 3*N outputs, one for each coordinate (x, y, z) of the N vertices
 
     def forward(self, x):
 
@@ -246,6 +255,7 @@ class GeometryPredictor(nn.Module):
         # Pass the features through fully connected layers.
         x = F.relu(self.fc1(features))
         x = F.relu(self.fc2(x))
+        # Return the final results of the last layer of the network
         output = self.fc3(x)
 
         return output
@@ -304,18 +314,18 @@ transform_I = transforms.Compose([
 dataset = CustomDataset(dir = args.input_path, transform_ISAR=transform_I)
 
 if args.use_case == "Classification":
-    # Inicializar modelo
+    # Initialize the model
     model = GeometryPredictor(num_labels=len(np.unique(dataset.labels_vector))).to(device)
 
-    # Definir el optimizador y la función de pérdida
+    # Setting the optimizer and the loss function
     optimizer = optim.SGD(params=model.parameters(), lr=0.01)
     criterion_CEL = nn.CrossEntropyLoss()
     
 elif args.use_case == "Regression":
-    # Inicializar modelo
+    # Intitialize the model
     model = GeometryPredictor(coords_width=dataset.coords.shape[1], num_labels=len(np.unique(dataset.labels_vector))).to(device)
 
-    # Definir el optimizador y la función de pérdida
+    # Setting the optimizer and the loss function
     optimizer = optim.Adam(model.parameters(), lr=0.001)
 
 # Dividir el dataset en entrenamiento y validación
@@ -327,18 +337,19 @@ generator = torch.Generator().manual_seed(seed)
 
 train_dataset, val_dataset, test_dataset = random_split(dataset, [train_size, val_size, test_size], generator=generator)
 
-# Crear DataLoaders para iterar sobre los datasets
+# Creating dataloaders to iterate over datasets
 train_batch_size = 32
 train_loader = torch.utils.data.DataLoader(train_dataset, batch_size=train_batch_size, shuffle=True)
 val_loader = torch.utils.data.DataLoader(val_dataset, batch_size=len(val_dataset), shuffle=False)
 test_loader = torch.utils.data.DataLoader(test_dataset, batch_size=len(test_dataset), shuffle=False)
 
-# Entrenamiento
+# Setting the number of training epochs
 num_epochs = 20
 
 # Early Stopping Instance
 early_stopping = EarlyStopping(patience=20, start_epoch=int(0.3*num_epochs))
 
+# Initializing empty vectors where losses will be saved
 num_train_batches=len(train_loader)
 avg_val_loss = np.empty(num_epochs, dtype=np.float32)
 avg_train_loss = np.empty(num_epochs, dtype=np.float32)
@@ -360,7 +371,7 @@ for epoch in range(num_epochs):
             loss = criterion_CEL(output_logits, target_label.long())
             running_train_loss += loss.item()
 
-            # Backward pass y optimización
+            # Backward pass and optimizing
             loss.backward()
             optimizer.step()
     
@@ -401,8 +412,6 @@ for epoch in range(num_epochs):
                 avg_val_loss[epoch] = lossChamfer.item()
     
     avg_train_loss[epoch] = running_train_loss / num_train_batches
-
-    # Check Early Stopping
     
     end_time = time.time()
     epoch_duration = end_time - start_time
@@ -414,7 +423,7 @@ for epoch in range(num_epochs):
         print(f"\nEpoch {epoch+1}/{num_epochs} completed in {epoch_duration:.2f} seconds with a training error of {avg_train_loss[epoch]:.4f}, a validation loss of {avg_val_loss[epoch]:.4f} and a relative training error of {avg_train_loss[epoch]/dataset.dist_max:.4f}\n")
         logging.info(f"\nEpoch {epoch+1}/{num_epochs} completed in {epoch_duration:.2f} seconds with a training error of {avg_train_loss[epoch]:.4f}, a validation loss of {avg_val_loss[epoch]:.4f} and a relative training error of {avg_train_loss[epoch]/dataset.dist_max:.4f}\n")
 
-    #Check Early Stopping
+    # Check Early Stopping
     if early_stopping(avg_val_loss[epoch]):
         break  # Stop training
 
@@ -453,13 +462,13 @@ plt.close()
 print(f"Loss plot saved at {plot_path}\n")
 logging.info(f"Loss plot saved at {plot_path}\n")
 
-# Guardar el modelo
+# Model saving
 # torch.save(model.state_dict(), f"{os.getcwd()}/Models/{args.use_case}_{args.data_type}_{initials}_{len(dataset)}_{datas_exact}samples_{num_epochs}ep_{train_batch_size}bs.pth")
  
 print("Model saved\n")
 logging.info("Model saved\n")
 
-# Evaluación en el conjunto de test
+# Test evaluation
 model.eval()
 with torch.no_grad():
     if args.use_case == "Classification":
