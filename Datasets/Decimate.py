@@ -30,7 +30,7 @@ def decimate_stl(input_filepath, output_filepath, target_faces=49975):
     bpy.ops.export_mesh.stl(filepath=output_filepath) # Exports of STL vary with the Blender version
 
 
-folder_path = "C:\\Users\\Diego\\Desktop\\N101\\Datasets\\AeroSTL"
+folder_path = "Datasets\\AeroSTL"
 lista = [os.path.splitext(filename)[0] for filename in os.listdir(folder_path) if filename.endswith('.stl')]
 
 lista=[
@@ -41,7 +41,7 @@ lista=[
 ]
 
 for geometry in lista:
-    input_filepath = f"C:\\Users\\Diego\\Desktop\\N101\\Datasets\\AeroSTL\\{geometry}.stl"
-    output_filepath = f"C:\\Users\\Diego\\Desktop\\N101\\Datasets\\STL_Blender\\{geometry}_50000.stl"
+    input_filepath = f"Datasets\\AeroSTL\\{geometry}.stl"
+    output_filepath = f"Datasets\\STL_Blender\\{geometry}_50000.stl"
 
     decimate_stl(input_filepath, output_filepath)
