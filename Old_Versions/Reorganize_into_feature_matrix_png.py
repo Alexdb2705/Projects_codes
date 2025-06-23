@@ -4,8 +4,8 @@ import numpy as np
 import pandas as pd
 
 # Origin and output path
-base_path = ""  # Change this path to your origin folder
-output_path = ""  # Change this path to your output folder
+base_path = r'\Regression'  # Change this path to your origin folder
+output_path = r'\Classification'  # Change this path to your output folder
 
 # Obtain the list of STL folders
 stl_folders = [f for f in os.listdir(base_path) if os.path.isdir(os.path.join(base_path, f))]
