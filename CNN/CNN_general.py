@@ -307,8 +307,8 @@ class EarlyStopping:
         return False
 
 transform_I = transforms.Compose([
-    transforms.Resize((128, 128)),   # Cambia esto según el tamaño de tus imágenes
-    transforms.ToTensor()            # Convertir las imágenes a tensores
+    transforms.Resize((128, 128)),   # Change this depending of image sizes
+    transforms.ToTensor()            # Converting images to tensors
 ])
 
 dataset = CustomDataset(dir = args.input_path, transform_ISAR=transform_I)
@@ -328,10 +328,10 @@ elif args.use_case == "Regression":
     # Setting the optimizer and the loss function
     optimizer = optim.Adam(model.parameters(), lr=0.001)
 
-# Dividir el dataset en entrenamiento y validación
-train_size = int(0.7 * len(dataset))  # 70% para entrenamiento
-val_size = int(0.15 * len(dataset))  # 15% para validación
-test_size = len(dataset) - train_size - val_size  # 15% para test
+# Split the dataset into train, validation and test
+train_size = int(0.7 * len(dataset))  # 70% for train
+val_size = int(0.15 * len(dataset))  # 15% for validation
+test_size = len(dataset) - train_size - val_size  # 15% for test
 
 generator = torch.Generator().manual_seed(seed)
 
@@ -386,7 +386,7 @@ for epoch in range(num_epochs):
             lossChamfer, _ = chamfer_distance(outputs, target_coords)
             running_train_loss += lossChamfer.item()
 
-            # Backward pass y optimización
+            # Backward pass and optimizing
             lossChamfer.backward()
             optimizer.step()
 
@@ -444,6 +444,7 @@ plt.legend()
 plt.grid(True)
 plt.tight_layout()
 
+# Extracting the initials of the geometries to be put in the names of the plots and model
 initials = ""
 datas_exact = args.input_path.split('_16_f')[0][-1]
 dictionary_path = args.input_path + "/dictionary" + args.input_path.split('ssification')[-1] + ".json"
@@ -457,6 +458,7 @@ os.makedirs(os.path.dirname(f"{os.getcwd()}/Models/"), exist_ok=True)
 plot_path = f"{os.getcwd()}/Models/{args.use_case}_{args.data_type}_{initials}_{len(dataset)}_{datas_exact}samples_{num_epochs}ep_{train_batch_size}bs_loss_plot.png"
 plt.savefig(plot_path)
 
+# Closing the plot to free memory
 plt.close()
 
 print(f"Loss plot saved at {plot_path}\n")
