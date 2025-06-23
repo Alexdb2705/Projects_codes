@@ -5,7 +5,7 @@ import matplotlib.pyplot as plt
 from matplotlib.colors import LinearSegmentedColormap
 import sys
 
-def genera_numpys(carpeta_archivos_txt, carpeta_guardado_npy, w, wf, nd, nf, f0, scan_angle):
+def genera_numpys(carpeta_archivos_txt, carpeta_guardado_npy, w, wf, nd, nf, f0, scan_angle, snr=0):
     """
     Generates .npy files from .txt files of field values and separates in 2 additional dimensions of real and imaginary parts.
     Moving between rows changes frequency, moving between columns changes angles.
@@ -51,6 +51,15 @@ def genera_numpys(carpeta_archivos_txt, carpeta_guardado_npy, w, wf, nd, nf, f0,
         delta_y = lambda0 / (2.0*2.0*np.radians(w))         #
         
         matriz_complex = matriz[:, :, 0] + 1j * matriz[:, :, 1]     # The matrix containing the full complex field value is created, as these values were stored separated in pairs
+
+        if snr:
+            pot_prom = sum(sum(np.abs(matriz_complex * matriz_complex))) / matriz_complex.size
+            desv = np.sqrt(pot_prom) / (10 ** (snr / 20))
+            noise = np.random.normal(0, desv, matriz_complex.shape)
+            pot_prom_noise = sum(sum(np.abs(noise * noise))) / matriz_complex.size
+            print("SNR extracted after calculating: ", 10 * np.log10(pot_prom / pot_prom_noise), "dB. Theoretical value: ", snr, "dB.")
+            matriz_complex = matriz_complex + noise
+
         # DESCOMENTAR Y QUITAR LA SUPERIOR matriz_complex = matriz[0, :, :] + 1j * matriz[1, :, :]     # The matrix containing the full complex field value is created, as these values were stored separated in pairs
         fft_general = np.fft.fftshift(np.fft.fft2(matriz_complex))         # The isar is made by doing the fft of that previous matrix
         general_template = np.zeros_like(matriz)
