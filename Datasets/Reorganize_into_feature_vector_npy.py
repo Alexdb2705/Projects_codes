@@ -5,21 +5,32 @@ import glob
 from random import shuffle
 import json
 
-def reorganization(scan_angle, nr_dictionary, nf, nd, datasets_path):
+def reorganization(scan_angle, nr_dictionary, nf, nd, datasets_path, top_folder_path, cw, snr):
     # Origin and output path
-    base_path = os.path.join(datasets_path, f"Raw/Samples_{nf}_f_{nd}_d")  # Path to folder where separated datasets are stored
 
     total_samples = 0
     for i in nr_dictionary.values():
         total_samples += (i[1] - i[0])
         
     for c in range(20):
-        if os.path.exists(os.path.join(datasets_path, f"Reorganized/Classification_{total_samples}_{c}_{nf}_f_{nd}_d")):
+
+        if cw == 0:
+            if snr == 0:
+                output_path = os.path.join(datasets_path, f"Reorganized/Classification_{total_samples}_{c}_{nf}_f_{nd}_d")
+            else:
+                output_path = os.path.join(datasets_path, f"Reorganized/Classification_{total_samples}_{c}_{nf}_f_{nd}_d_SNR_{snr}")
+        else:
+            if snr == 0:
+                output_path = os.path.join(datasets_path, f"Reorganized/Classification_{total_samples}_{c}_{nf}_f_{nd}_d_POV_{cw}")
+            else:
+                output_path = os.path.join(datasets_path, f"Reorganized/Classification_{total_samples}_{c}_{nf}_f_{nd}_d_POV_{cw}_SNR_{snr}")
+
+        if os.path.isdir(output_path):
             pass
         else:
-            output_path = os.path.join(datasets_path, f"Reorganized/Classification_{total_samples}_{c}_{nf}_f_{nd}_d")
             os.makedirs(output_path, exist_ok=True)
             break
+
     assert c<20 , "Error in folder creation"
 
     with open(os.path.join(output_path, f"dictionary_{total_samples}_{c}_{nf}_f_{nd}_d.json"), 'w') as json_file:
@@ -32,7 +43,6 @@ def reorganization(scan_angle, nr_dictionary, nf, nd, datasets_path):
 
     existing_files = len(glob.glob(os.path.join(output_path, "sample_*")))
 
-
     # Initialize variables
     label_vector = np.zeros(total_samples, dtype=int)
 
@@ -43,7 +53,7 @@ def reorganization(scan_angle, nr_dictionary, nf, nd, datasets_path):
 
     # Process every STL folder
     for stl_index, stl_name in enumerate(stl_folders):
-        stl_path = os.path.join(base_path, stl_name)
+        stl_path = os.path.join(top_folder_path, stl_name)
         
         # Obtain the first samples_per_stl files sorted by name
         source_files_isar = files_sorted(stl_path, "fft.npy")[nr_dictionary[stl_name][0]:nr_dictionary[stl_name][1]]
