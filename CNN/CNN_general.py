@@ -18,6 +18,7 @@ import time
 import argparse
 from datetime import datetime
 from torcheval.metrics.functional import multiclass_confusion_matrix
+import json
 
 # Obtener la fecha y hora actual
 actual_time = datetime.now()
@@ -29,6 +30,8 @@ if userPath == "newfasant2":
     userPath = userPath + "/N101"
     cuda_own = "cuda:1"
 
+logs_folder_path=f'/home/{userPath}/N101-IA/CNN/Logs'
+os.makedirs(logs_folder_path, exist_ok=True)
 logging.basicConfig(
     filename=f'/home/{userPath}/N101-IA/CNN/Logs/Day_{actual_time.day}_{actual_time.month}_{actual_time.year}_Time_{actual_time.hour:02d}_{actual_time.minute:02d}_NN.log',  # Name of the log file
     level=logging.INFO,  # Logs level (INFO, DEBUG, ERROR, etc.)
@@ -54,7 +57,7 @@ device = (
     else "cpu"
          )
 
-seed= 89 #10, 102, 103, 104, 1005, 100005 works
+seed= 10 #89, #10, 102, 103, 104, 1005, 100005 works
 
 torch.manual_seed(seed)
 torch.cuda.manual_seed(seed)
@@ -331,10 +334,10 @@ val_loader = torch.utils.data.DataLoader(val_dataset, batch_size=len(val_dataset
 test_loader = torch.utils.data.DataLoader(test_dataset, batch_size=len(test_dataset), shuffle=False)
 
 # Entrenamiento
-num_epochs = 1100
+num_epochs = 20
 
 # Early Stopping Instance
-early_stopping = EarlyStopping(patience=20, start_epoch=int(0.8*num_epochs))
+early_stopping = EarlyStopping(patience=20, start_epoch=int(0.3*num_epochs))
 
 num_train_batches=len(train_loader)
 avg_val_loss = np.empty(num_epochs, dtype=np.float32)
@@ -400,8 +403,6 @@ for epoch in range(num_epochs):
     avg_train_loss[epoch] = running_train_loss / num_train_batches
 
     # Check Early Stopping
-    if early_stopping(avg_val_loss[epoch]):
-        break  # Stop training
     
     end_time = time.time()
     epoch_duration = end_time - start_time
@@ -412,6 +413,10 @@ for epoch in range(num_epochs):
     elif args.use_case == "Regression":
         print(f"\nEpoch {epoch+1}/{num_epochs} completed in {epoch_duration:.2f} seconds with a training error of {avg_train_loss[epoch]:.4f}, a validation loss of {avg_val_loss[epoch]:.4f} and a relative training error of {avg_train_loss[epoch]/dataset.dist_max:.4f}\n")
         logging.info(f"\nEpoch {epoch+1}/{num_epochs} completed in {epoch_duration:.2f} seconds with a training error of {avg_train_loss[epoch]:.4f}, a validation loss of {avg_val_loss[epoch]:.4f} and a relative training error of {avg_train_loss[epoch]/dataset.dist_max:.4f}\n")
+
+    #Check Early Stopping
+    if early_stopping(avg_val_loss[epoch]):
+        break  # Stop training
 
 print("Entrenamiento completado\n")
 logging.info("Entrenamiento completado\n")
@@ -430,9 +435,17 @@ plt.legend()
 plt.grid(True)
 plt.tight_layout()
 
+initials = ""
+datas_exact = args.input_path.split('_16_f')[0][-1]
+dictionary_path = args.input_path + "/dictionary" + args.input_path.split('ssification')[-1] + ".json"
+with open(dictionary_path, 'r', encoding='utf-8') as f:
+    dict = json.load(f)
+for name in dict.keys():
+    initials = initials + name[0]
+
 # Save the plot
-plot_path = f"{os.getcwd()}/Models/{args.use_case}_{args.data_type}_{len(dataset)}samples_{num_epochs}ep_{train_batch_size}bs_loss_plot.png"
-os.makedirs(os.path.dirname(plot_path), exist_ok=True)
+os.makedirs(os.path.dirname(f"{os.getcwd()}/Models/"), exist_ok=True)
+plot_path = f"{os.getcwd()}/Models/{args.use_case}_{args.data_type}_{initials}_{len(dataset)}_{datas_exact}samples_{num_epochs}ep_{train_batch_size}bs_loss_plot.png"
 plt.savefig(plot_path)
 
 plt.close()
@@ -441,7 +454,7 @@ print(f"Loss plot saved at {plot_path}\n")
 logging.info(f"Loss plot saved at {plot_path}\n")
 
 # Guardar el modelo
-torch.save(model.state_dict(), f"{os.getcwd()}/Models/{args.use_case}_{args.data_type}_{len(dataset)}samples_{num_epochs}ep_{train_batch_size}bs.pth")
+# torch.save(model.state_dict(), f"{os.getcwd()}/Models/{args.use_case}_{args.data_type}_{initials}_{len(dataset)}_{datas_exact}samples_{num_epochs}ep_{train_batch_size}bs.pth")
  
 print("Model saved\n")
 logging.info("Model saved\n")
@@ -474,9 +487,9 @@ with torch.no_grad():
             plt.xlabel('Predicted Label')
             plt.ylabel('True Label')
             plt.tight_layout()
-            plt.savefig(f"{os.getcwd()}/Models/{args.use_case}_{args.data_type}_{len(dataset)}samples_{num_epochs}ep_{train_batch_size}bs_confusion_matrix.png")
+            plt.savefig(f"{os.getcwd()}/Models/{args.use_case}_{args.data_type}_{initials}_{len(dataset)}_{datas_exact}samples_{num_epochs}ep_{train_batch_size}bs_confusion_matrix.png")
             plt.close()
-            print(f"Confusion matrix saved at {os.getcwd()}/Models/{args.use_case}_{args.data_type}_{len(dataset)}samples_{num_epochs}ep_{train_batch_size}bs_confusion_matrix.png")
+            print(f"Confusion matrix saved at {os.getcwd()}/Models/{args.use_case}_{args.data_type}_{initials}_{len(dataset)}_{datas_exact}samples_{num_epochs}ep_{train_batch_size}bs_confusion_matrix.png")
 
             test_loss = criterion_CEL(output_logits, target_label.long())
 
