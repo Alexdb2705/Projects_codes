@@ -15,6 +15,8 @@ userPath = os.getcwd().split('/')[2]
 if userPath == "newfasant2":
     userPath = userPath + "/N101"
 
+logs_folder_path=f'/home/{userPath}/N101-IA/Datasets/Logs'
+os.makedirs(logs_folder_path, exist_ok=True)
 logging.basicConfig(
     filename=f'/home/{userPath}/N101-IA/Datasets/Logs/Day_{actual_time.day}_{actual_time.month}_{actual_time.year}_Time_{actual_time.hour:02d}_{actual_time.minute:02d}_dataset.log',  # Name of the log file
     level=logging.INFO,  # Logs level (INFO, DEBUG, ERROR, etc.)
@@ -35,12 +37,26 @@ def main():
     parser.add_argument('-d', '--scan_angle', type=str, default="theta", choices=["theta", "phi"], help='Elegir en qué ángulo se realizan los barridos.')
     parser.add_argument('-r', '--reorganize', action='store_true', help='Enable reorganization')
     parser.add_argument('--nr', nargs='+', type=int, help='Number of samples per geometrie to make up the reorganization folder')
-    parser.add_argument('--pov', type=str, choices=["front", "left_side", "right_side", "back"], help='Which part of the object will be being looked')
-    parser.add_argument('--cw', type=float, default=15, help='Value of the semi-width established for the pov cone in degrees')
+    parser.add_argument('--pov', type=str, default=None, choices=["front", "left_side", "right_side", "back"], help='Which part of the object will be being looked')
+    parser.add_argument('--cw', type=float, default=0, help='Value of the semi-width established for the pov cone in degrees')
+    parser.add_argument('--snr', type=float, default=0, help='Value of the signal-to-noise ratio, expressed in dB, used to add noise to the dataset.')
 
     args = parser.parse_args()
+
+    if args.pov ==None:
+        assert args.cw == 0 , "If there's no POV, cone width must be 0"
     
-    top_folder_path = os.path.join(args.output_path, f"Raw/Samples_{args.nf}_f_{args.nd}_d")
+    if args.pov == None:
+        if args.snr == 0:
+            top_folder_path = os.path.join(args.output_path, f"Raw/Samples_{args.nf}_f_{args.nd}_d")
+        else:
+            top_folder_path = os.path.join(args.output_path, f"Raw/Samples_{args.nf}_f_{args.nd}_d_SNR_{args.snr}")
+    else:
+        if args.snr == 0:
+            top_folder_path = os.path.join(args.output_path, f"Raw/Samples_{args.nf}_f_{args.nd}_d_POV_{args.cw}")
+        else:
+            top_folder_path = os.path.join(args.output_path, f"Raw/Samples_{args.nf}_f_{args.nd}_d_POV_{args.cw}_SNR_{args.snr}")
+
     os.makedirs(top_folder_path, exist_ok=True)
 
     if args.num_samples != 0: # If the number of samples is 0, only the reorganization to obtain the classification dataset will be done. 
@@ -69,7 +85,8 @@ def main():
             msh_folder_path = os.path.join(args.output_path, "Geometries")
             msh_path = msh_folder_path + '/' + geom + ".msh"
 
-            isar_aprox = 16
+            isar_aprox = args.nd
+            print(f"The Isar Aprox is equal to {isar_aprox}\n")
             logging.info(f"The Isar Aprox is equal to {isar_aprox}")
 
             # Gemis generation starts for one geometry 
@@ -112,7 +129,7 @@ def main():
             logging.info(f"GEMIS generation of {args.num_samples} samples of the {geom} completed in {toc_1-tic} seconds, {(toc_1-tic)/60} minutes.")
 
             procesar_archivos(f"/home/{userPath}/N101-IA/Datasets/Raw/_Out", sample_folder_path, args.scan_angle)
-            genera_numpys(sample_folder_path, sample_folder_path, args.angular_width, args.wf, args.nd, args.nf, args.freq_central, args.scan_angle)
+            genera_numpys(sample_folder_path, sample_folder_path, args.angular_width, args.wf, args.nd, args.nf, args.freq_central, args.scan_angle, args.snr)
 
             toc_2 = time.time()
 
@@ -127,7 +144,7 @@ def main():
         logging.info(f"\nReorganization of samples has started...\n")
 
         nr_dictionary = multiple_reorganization(args.nr, args.geometries)
-        reorganization(args.scan_angle, nr_dictionary, args.nf, args.nd, args.output_path) # Reorganize the samples
+        reorganization(args.scan_angle, nr_dictionary, args.nf, args.nd, args.output_path, top_folder_path, args.cw, args.snr) # Reorganize the samples
 
         print(f"\nReorganization of samples completed\n")
         logging.info(f"\nReorganization of samples completed\n")
@@ -136,4 +153,4 @@ if __name__ == '__main__':
     main()
 
 # python NewGenDat.py -g 2_cubes_zero_two_fixed -n 3 --nd 64 --nf 64 -w 1.72 -d "phi" -f 1e10 --wf 3e8 
-# vapor55_50000_real Scaneagle_UAV_50000_real Drone_X8_quadrocopter_50000_real Agriculteur_UAV_real AH-1Z_Cobra_50000_fixed_meters Hurjet_50000_fixed_meters Consolidated_PBY-5A_Catalina_50000_fixed_meters Cube_4_meters_fixed Avenger-716_UAV_50000_fixed_meters Scaneagle_UAV_50000_fixed_meters Siren_UAV_fixed_meters Sphinx_UAV_50000_fixed_meters Supersonic_Jet_50000_fixed_meters V280.00-Bell_fixed_meters Space_Invader_fixed
+# vapor55_50000_real Scaneagle_UAV_50000_real Drone_X8_quadrocopter_50000_real Agriculteur_UAV_real 
