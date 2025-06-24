@@ -57,7 +57,7 @@ def genera_numpys(carpeta_archivos_txt, carpeta_guardado_npy, w, wf, nd, nf, f0,
             desv = np.sqrt(pot_prom) / (10 ** (snr / 20))
             noise = np.random.normal(0, desv, matriz_complex.shape)
             pot_prom_noise = sum(sum(np.abs(noise * noise))) / matriz_complex.size
-            print("SNR extracted after calculating: ", 10 * np.log10(pot_prom / pot_prom_noise), "dB. Theoretical value: ", snr, "dB.")
+            # print("SNR extracted after calculating: ", 10 * np.log10(pot_prom / pot_prom_noise), "dB. Theoretical value: ", snr, "dB.")
             matriz_complex = matriz_complex + noise
 
         # DESCOMENTAR Y QUITAR LA SUPERIOR matriz_complex = matriz[0, :, :] + 1j * matriz[1, :, :]     # The matrix containing the full complex field value is created, as these values were stored separated in pairs
