@@ -43,7 +43,7 @@ def main():
 
     args = parser.parse_args()
 
-    if args.pov ==None:
+    if args.pov == None:
         assert args.cw == 0 , "If there's no POV, cone width must be 0"
     
     if args.pov == None:
@@ -53,9 +53,9 @@ def main():
             top_folder_path = os.path.join(args.output_path, f"Raw/Samples_{args.nf}_f_{args.nd}_d_SNR_{args.snr}")
     else:
         if args.snr == 0:
-            top_folder_path = os.path.join(args.output_path, f"Raw/Samples_{args.nf}_f_{args.nd}_d_POV_{args.cw}")
+            top_folder_path = os.path.join(args.output_path, f"Raw/Samples_{args.nf}_f_{args.nd}_d_POV_{args.pov}_{args.cw}")
         else:
-            top_folder_path = os.path.join(args.output_path, f"Raw/Samples_{args.nf}_f_{args.nd}_d_POV_{args.cw}_SNR_{args.snr}")
+            top_folder_path = os.path.join(args.output_path, f"Raw/Samples_{args.nf}_f_{args.nd}_d_POV_{args.pov}_{args.cw}_SNR_{args.snr}")
 
     os.makedirs(top_folder_path, exist_ok=True)
 
