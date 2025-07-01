@@ -1,0 +1,3027 @@
+2025-06-27 12:03:16,504 - INFO - 
+Los argumentos son {'input_path': '/home/newfasant2/N101/N101-IA/Datasets/Reorganized/Classification_1050_0_16_f_16_d_POV_5.16_SNR_5.0', 'use_case': 'Classification', 'data_type': 'npy', 'num_epochs': 22}
+
+
+Using cuda:1 device, npy data type, Classification use case and seed 10.
+
+
+Epoch 1/22 completed in 0.42 seconds with a training error of 1.0986 a validation loss of 1.0989
+
+
+Epoch 2/22 completed in 0.17 seconds with a training error of 1.0985 a validation loss of 1.0990
+
+
+Epoch 3/22 completed in 0.17 seconds with a training error of 1.0985 a validation loss of 1.0990
+
+
+Epoch 4/22 completed in 0.17 seconds with a training error of 1.0984 a validation loss of 1.0991
+
+
+Epoch 5/22 completed in 0.17 seconds with a training error of 1.0983 a validation loss of 1.0992
+
+
+Epoch 6/22 completed in 0.17 seconds with a training error of 1.0983 a validation loss of 1.0992
+
+
+Epoch 7/22 completed in 0.17 seconds with a training error of 1.0983 a validation loss of 1.0993
+
+
+Epoch 8/22 completed in 0.17 seconds with a training error of 1.0983 a validation loss of 1.0993
+
+
+Epoch 9/22 completed in 0.17 seconds with a training error of 1.0983 a validation loss of 1.0993
+
+
+Epoch 10/22 completed in 0.17 seconds with a training error of 1.0982 a validation loss of 1.0994
+
+
+Epoch 11/22 completed in 0.17 seconds with a training error of 1.0982 a validation loss of 1.0994
+
+
+Epoch 12/22 completed in 0.17 seconds with a training error of 1.0982 a validation loss of 1.0994
+
+
+Epoch 13/22 completed in 0.17 seconds with a training error of 1.0981 a validation loss of 1.0995
+
+
+Epoch 14/22 completed in 0.17 seconds with a training error of 1.0981 a validation loss of 1.0995
+
+
+Epoch 15/22 completed in 0.17 seconds with a training error of 1.0982 a validation loss of 1.0995
+
+
+Epoch 16/22 completed in 0.17 seconds with a training error of 1.0981 a validation loss of 1.0995
+
+
+Epoch 17/22 completed in 0.17 seconds with a training error of 1.0980 a validation loss of 1.0995
+
+
+Epoch 18/22 completed in 0.17 seconds with a training error of 1.0980 a validation loss of 1.0995
+
+
+Epoch 19/22 completed in 0.17 seconds with a training error of 1.0980 a validation loss of 1.0995
+
+
+Epoch 20/22 completed in 0.17 seconds with a training error of 1.0980 a validation loss of 1.0995
+
+
+Epoch 21/22 completed in 0.17 seconds with a training error of 1.0980 a validation loss of 1.0995
+
+
+Epoch 22/22 completed in 0.17 seconds with a training error of 1.0979 a validation loss of 1.0995
+
+Entrenamiento completado
+
+Loss plot saved at /home/newfasant2/N101/N101-IA/Models/Classification_npy_SvD_POV_5.16_SNR_5.0_1050_0samples_22ep_32bs_loss_plot.png
+
+Model saved
+
+Test Accuracy: 31.01%
+Confusion matrix saved at /home/newfasant2/N101/N101-IA/Models/Classification_npy_SvD_POV_5.16_SNR_5.0_1050_0samples_22ep_32bs_confusion_matrix.png
+Tiempo por sample: 0.002583 seconds
+Error medio de test:  tensor(1.1007, device='cuda:1')
+Fin de la ejecución
+
+2025-06-27 12:03:24,202 - INFO - 
+Los argumentos son {'input_path': '/home/newfasant2/N101/N101-IA/Datasets/Reorganized/Classification_1050_0_16_f_16_d_POV_5.16_SNR_5.0', 'use_case': 'Classification', 'data_type': 'field', 'num_epochs': 22}
+
+
+Using cuda:1 device, field data type, Classification use case and seed 10.
+
+
+Epoch 1/22 completed in 0.43 seconds with a training error of 1.0986 a validation loss of 1.0984
+
+
+Epoch 2/22 completed in 0.18 seconds with a training error of 1.0979 a validation loss of 1.0979
+
+
+Epoch 3/22 completed in 0.18 seconds with a training error of 1.0973 a validation loss of 1.0974
+
+
+Epoch 4/22 completed in 0.18 seconds with a training error of 1.0967 a validation loss of 1.0969
+
+
+Epoch 5/22 completed in 0.19 seconds with a training error of 1.0960 a validation loss of 1.0964
+
+
+Epoch 6/22 completed in 0.18 seconds with a training error of 1.0954 a validation loss of 1.0958
+
+
+Epoch 7/22 completed in 0.18 seconds with a training error of 1.0947 a validation loss of 1.0951
+
+
+Epoch 8/22 completed in 0.18 seconds with a training error of 1.0940 a validation loss of 1.0944
+
+
+Epoch 9/22 completed in 0.20 seconds with a training error of 1.0932 a validation loss of 1.0935
+
+
+Epoch 10/22 completed in 0.22 seconds with a training error of 1.0922 a validation loss of 1.0925
+
+
+Epoch 11/22 completed in 0.18 seconds with a training error of 1.0911 a validation loss of 1.0914
+
+
+Epoch 12/22 completed in 0.18 seconds with a training error of 1.0899 a validation loss of 1.0901
+
+
+Epoch 13/22 completed in 0.18 seconds with a training error of 1.0884 a validation loss of 1.0884
+
+
+Epoch 14/22 completed in 0.18 seconds with a training error of 1.0865 a validation loss of 1.0862
+
+
+Epoch 15/22 completed in 0.18 seconds with a training error of 1.0845 a validation loss of 1.0840
+
+
+Epoch 16/22 completed in 0.18 seconds with a training error of 1.0817 a validation loss of 1.0808
+
+
+Epoch 17/22 completed in 0.18 seconds with a training error of 1.0782 a validation loss of 1.0767
+
+
+Epoch 18/22 completed in 0.18 seconds with a training error of 1.0738 a validation loss of 1.0713
+
+
+Epoch 19/22 completed in 0.18 seconds with a training error of 1.0678 a validation loss of 1.0640
+
+
+Epoch 20/22 completed in 0.18 seconds with a training error of 1.0599 a validation loss of 1.0540
+
+
+Epoch 21/22 completed in 0.18 seconds with a training error of 1.0482 a validation loss of 1.0389
+
+
+Epoch 22/22 completed in 0.18 seconds with a training error of 1.0300 a validation loss of 1.0149
+
+Entrenamiento completado
+
+Loss plot saved at /home/newfasant2/N101/N101-IA/Models/Classification_field_SvD_POV_5.16_SNR_5.0_1050_0samples_22ep_32bs_loss_plot.png
+
+Model saved
+
+Test Accuracy: 98.10%
+Confusion matrix saved at /home/newfasant2/N101/N101-IA/Models/Classification_field_SvD_POV_5.16_SNR_5.0_1050_0samples_22ep_32bs_confusion_matrix.png
+Tiempo por sample: 0.002572 seconds
+Error medio de test:  tensor(1.0162, device='cuda:1')
+Fin de la ejecución
+
+2025-06-27 12:03:47,354 - INFO - 
+Los argumentos son {'input_path': '/home/newfasant2/N101/N101-IA/Datasets/Reorganized/Classification_1050_0_16_f_16_d_POV_5.16_SNR_5.0', 'use_case': 'Classification', 'data_type': 'ISAR', 'num_epochs': 22}
+
+
+Using cuda:1 device, ISAR data type, Classification use case and seed 10.
+
+
+Epoch 1/22 completed in 1.11 seconds with a training error of 1.0988 a validation loss of 1.0984
+
+
+Epoch 2/22 completed in 0.89 seconds with a training error of 1.0985 a validation loss of 1.0984
+
+
+Epoch 3/22 completed in 0.89 seconds with a training error of 1.0984 a validation loss of 1.0984
+
+
+Epoch 4/22 completed in 0.89 seconds with a training error of 1.0982 a validation loss of 1.0984
+
+
+Epoch 5/22 completed in 0.89 seconds with a training error of 1.0981 a validation loss of 1.0984
+
+
+Epoch 6/22 completed in 0.88 seconds with a training error of 1.0980 a validation loss of 1.0984
+
+
+Epoch 7/22 completed in 0.88 seconds with a training error of 1.0978 a validation loss of 1.0984
+
+
+Epoch 8/22 completed in 0.88 seconds with a training error of 1.0977 a validation loss of 1.0983
+
+
+Epoch 9/22 completed in 0.88 seconds with a training error of 1.0976 a validation loss of 1.0983
+
+
+Epoch 10/22 completed in 0.88 seconds with a training error of 1.0974 a validation loss of 1.0981
+
+
+Epoch 11/22 completed in 0.88 seconds with a training error of 1.0972 a validation loss of 1.0981
+
+
+Epoch 12/22 completed in 0.89 seconds with a training error of 1.0971 a validation loss of 1.0979
+
+
+Epoch 13/22 completed in 0.88 seconds with a training error of 1.0968 a validation loss of 1.0977
+
+
+Epoch 14/22 completed in 0.88 seconds with a training error of 1.0965 a validation loss of 1.0975
+
+
+Epoch 15/22 completed in 0.88 seconds with a training error of 1.0963 a validation loss of 1.0972
+
+
+Epoch 16/22 completed in 0.89 seconds with a training error of 1.0959 a validation loss of 1.0968
+
+
+Epoch 17/22 completed in 0.89 seconds with a training error of 1.0954 a validation loss of 1.0963
+
+
+Epoch 18/22 completed in 0.89 seconds with a training error of 1.0949 a validation loss of 1.0957
+
+
+Epoch 19/22 completed in 0.89 seconds with a training error of 1.0942 a validation loss of 1.0949
+
+
+Epoch 20/22 completed in 0.89 seconds with a training error of 1.0934 a validation loss of 1.0939
+
+
+Epoch 21/22 completed in 0.89 seconds with a training error of 1.0921 a validation loss of 1.0926
+
+
+Epoch 22/22 completed in 0.89 seconds with a training error of 1.0906 a validation loss of 1.0907
+
+Entrenamiento completado
+
+Loss plot saved at /home/newfasant2/N101/N101-IA/Models/Classification_ISAR_SvD_POV_5.16_SNR_5.0_1050_0samples_22ep_32bs_loss_plot.png
+
+Model saved
+
+Test Accuracy: 31.01%
+Confusion matrix saved at /home/newfasant2/N101/N101-IA/Models/Classification_ISAR_SvD_POV_5.16_SNR_5.0_1050_0samples_22ep_32bs_confusion_matrix.png
+Tiempo por sample: 0.002904 seconds
+Error medio de test:  tensor(1.0920, device='cuda:1')
+Fin de la ejecución
+
+2025-06-27 12:03:54,556 - INFO - 
+Los argumentos son {'input_path': '/home/newfasant2/N101/N101-IA/Datasets/Reorganized/Classification_1050_0_16_f_16_d_POV_5.16_SNR_5.0', 'use_case': 'Classification', 'data_type': 'field_ph_npy', 'num_epochs': 22}
+
+
+Using cuda:1 device, field_ph_npy data type, Classification use case and seed 10.
+
+
+Epoch 1/22 completed in 0.41 seconds with a training error of 1.0980 a validation loss of 1.0972
+
+
+Epoch 2/22 completed in 0.17 seconds with a training error of 1.0967 a validation loss of 1.0962
+
+
+Epoch 3/22 completed in 0.18 seconds with a training error of 1.0956 a validation loss of 1.0952
+
+
+Epoch 4/22 completed in 0.18 seconds with a training error of 1.0943 a validation loss of 1.0941
+
+
+Epoch 5/22 completed in 0.16 seconds with a training error of 1.0930 a validation loss of 1.0928
+
+
+Epoch 6/22 completed in 0.16 seconds with a training error of 1.0915 a validation loss of 1.0913
+
+
+Epoch 7/22 completed in 0.16 seconds with a training error of 1.0898 a validation loss of 1.0894
+
+
+Epoch 8/22 completed in 0.15 seconds with a training error of 1.0877 a validation loss of 1.0870
+
+
+Epoch 9/22 completed in 0.16 seconds with a training error of 1.0853 a validation loss of 1.0843
+
+
+Epoch 10/22 completed in 0.16 seconds with a training error of 1.0819 a validation loss of 1.0805
+
+
+Epoch 11/22 completed in 0.16 seconds with a training error of 1.0779 a validation loss of 1.0760
+
+
+Epoch 12/22 completed in 0.16 seconds with a training error of 1.0727 a validation loss of 1.0702
+
+
+Epoch 13/22 completed in 0.16 seconds with a training error of 1.0654 a validation loss of 1.0612
+
+
+Epoch 14/22 completed in 0.16 seconds with a training error of 1.0546 a validation loss of 1.0478
+
+
+Epoch 15/22 completed in 0.16 seconds with a training error of 1.0395 a validation loss of 1.0301
+
+
+Epoch 16/22 completed in 0.16 seconds with a training error of 1.0136 a validation loss of 0.9931
+
+
+Epoch 17/22 completed in 0.16 seconds with a training error of 0.9643 a validation loss of 0.9205
+
+
+Epoch 18/22 completed in 0.16 seconds with a training error of 0.8593 a validation loss of 0.7687
+
+
+Epoch 19/22 completed in 0.17 seconds with a training error of 0.6508 a validation loss of 0.6458
+
+
+Epoch 20/22 completed in 0.16 seconds with a training error of 0.4255 a validation loss of 0.1468
+
+
+Epoch 21/22 completed in 0.17 seconds with a training error of 0.3077 a validation loss of 0.0684
+
+
+Epoch 22/22 completed in 0.16 seconds with a training error of 0.0512 a validation loss of 0.0272
+
+Entrenamiento completado
+
+Loss plot saved at /home/newfasant2/N101/N101-IA/Models/Classification_field_ph_npy_SvD_POV_5.16_SNR_5.0_1050_0samples_22ep_32bs_loss_plot.png
+
+Model saved
+
+Test Accuracy: 100.00%
+Confusion matrix saved at /home/newfasant2/N101/N101-IA/Models/Classification_field_ph_npy_SvD_POV_5.16_SNR_5.0_1050_0samples_22ep_32bs_confusion_matrix.png
+Tiempo por sample: 0.002467 seconds
+Error medio de test:  tensor(0.0342, device='cuda:1')
+Fin de la ejecución
+
+2025-06-27 12:04:03,069 - INFO - 
+Los argumentos son {'input_path': '/home/newfasant2/N101/N101-IA/Datasets/Reorganized/Classification_1050_0_16_f_16_d_POV_5.16_SNR_5.0', 'use_case': 'Classification', 'data_type': 'npy', 'num_epochs': 29}
+
+
+Using cuda:1 device, npy data type, Classification use case and seed 10.
+
+
+Epoch 1/29 completed in 0.42 seconds with a training error of 1.0986 a validation loss of 1.0989
+
+
+Epoch 2/29 completed in 0.18 seconds with a training error of 1.0985 a validation loss of 1.0990
+
+
+Epoch 3/29 completed in 0.18 seconds with a training error of 1.0985 a validation loss of 1.0990
+
+
+Epoch 4/29 completed in 0.18 seconds with a training error of 1.0984 a validation loss of 1.0991
+
+
+Epoch 5/29 completed in 0.18 seconds with a training error of 1.0983 a validation loss of 1.0992
+
+
+Epoch 6/29 completed in 0.19 seconds with a training error of 1.0983 a validation loss of 1.0992
+
+
+Epoch 7/29 completed in 0.18 seconds with a training error of 1.0983 a validation loss of 1.0993
+
+
+Epoch 8/29 completed in 0.17 seconds with a training error of 1.0983 a validation loss of 1.0993
+
+
+Epoch 9/29 completed in 0.19 seconds with a training error of 1.0983 a validation loss of 1.0993
+
+
+Epoch 10/29 completed in 0.16 seconds with a training error of 1.0982 a validation loss of 1.0994
+
+
+Epoch 11/29 completed in 0.16 seconds with a training error of 1.0982 a validation loss of 1.0994
+
+
+Epoch 12/29 completed in 0.16 seconds with a training error of 1.0982 a validation loss of 1.0994
+
+
+Epoch 13/29 completed in 0.17 seconds with a training error of 1.0981 a validation loss of 1.0995
+
+
+Epoch 14/29 completed in 0.16 seconds with a training error of 1.0981 a validation loss of 1.0995
+
+
+Epoch 15/29 completed in 0.17 seconds with a training error of 1.0982 a validation loss of 1.0995
+
+
+Epoch 16/29 completed in 0.16 seconds with a training error of 1.0981 a validation loss of 1.0995
+
+
+Epoch 17/29 completed in 0.17 seconds with a training error of 1.0980 a validation loss of 1.0995
+
+
+Epoch 18/29 completed in 0.16 seconds with a training error of 1.0980 a validation loss of 1.0995
+
+
+Epoch 19/29 completed in 0.16 seconds with a training error of 1.0980 a validation loss of 1.0995
+
+
+Epoch 20/29 completed in 0.17 seconds with a training error of 1.0980 a validation loss of 1.0995
+
+
+Epoch 21/29 completed in 0.16 seconds with a training error of 1.0980 a validation loss of 1.0995
+
+
+Epoch 22/29 completed in 0.16 seconds with a training error of 1.0979 a validation loss of 1.0995
+
+
+Epoch 23/29 completed in 0.16 seconds with a training error of 1.0979 a validation loss of 1.0995
+
+
+Epoch 24/29 completed in 0.17 seconds with a training error of 1.0979 a validation loss of 1.0995
+
+
+Epoch 25/29 completed in 0.16 seconds with a training error of 1.0979 a validation loss of 1.0995
+
+
+Epoch 26/29 completed in 0.16 seconds with a training error of 1.0979 a validation loss of 1.0994
+
+
+Epoch 27/29 completed in 0.16 seconds with a training error of 1.0978 a validation loss of 1.0994
+
+
+Epoch 28/29 completed in 0.16 seconds with a training error of 1.0979 a validation loss of 1.0994
+
+
+Epoch 29/29 completed in 0.16 seconds with a training error of 1.0978 a validation loss of 1.0994
+
+
+Early stopping triggered after 20 epochs.
+
+Entrenamiento completado
+
+Loss plot saved at /home/newfasant2/N101/N101-IA/Models/Classification_npy_SvD_POV_5.16_SNR_5.0_1050_0samples_29ep_32bs_loss_plot.png
+
+Model saved
+
+Test Accuracy: 31.01%
+Confusion matrix saved at /home/newfasant2/N101/N101-IA/Models/Classification_npy_SvD_POV_5.16_SNR_5.0_1050_0samples_29ep_32bs_confusion_matrix.png
+Tiempo por sample: 0.002465 seconds
+Error medio de test:  tensor(1.1006, device='cuda:1')
+Fin de la ejecución
+
+2025-06-27 12:04:11,589 - INFO - 
+Los argumentos son {'input_path': '/home/newfasant2/N101/N101-IA/Datasets/Reorganized/Classification_1050_0_16_f_16_d_POV_5.16_SNR_5.0', 'use_case': 'Classification', 'data_type': 'field', 'num_epochs': 29}
+
+
+Using cuda:1 device, field data type, Classification use case and seed 10.
+
+
+Epoch 1/29 completed in 0.41 seconds with a training error of 1.0986 a validation loss of 1.0984
+
+
+Epoch 2/29 completed in 0.17 seconds with a training error of 1.0979 a validation loss of 1.0979
+
+
+Epoch 3/29 completed in 0.17 seconds with a training error of 1.0973 a validation loss of 1.0974
+
+
+Epoch 4/29 completed in 0.17 seconds with a training error of 1.0967 a validation loss of 1.0969
+
+
+Epoch 5/29 completed in 0.17 seconds with a training error of 1.0960 a validation loss of 1.0964
+
+
+Epoch 6/29 completed in 0.17 seconds with a training error of 1.0954 a validation loss of 1.0958
+
+
+Epoch 7/29 completed in 0.16 seconds with a training error of 1.0947 a validation loss of 1.0951
+
+
+Epoch 8/29 completed in 0.16 seconds with a training error of 1.0940 a validation loss of 1.0944
+
+
+Epoch 9/29 completed in 0.16 seconds with a training error of 1.0932 a validation loss of 1.0935
+
+
+Epoch 10/29 completed in 0.16 seconds with a training error of 1.0922 a validation loss of 1.0925
+
+
+Epoch 11/29 completed in 0.16 seconds with a training error of 1.0911 a validation loss of 1.0914
+
+
+Epoch 12/29 completed in 0.16 seconds with a training error of 1.0899 a validation loss of 1.0901
+
+
+Epoch 13/29 completed in 0.16 seconds with a training error of 1.0884 a validation loss of 1.0884
+
+
+Epoch 14/29 completed in 0.16 seconds with a training error of 1.0865 a validation loss of 1.0862
+
+
+Epoch 15/29 completed in 0.17 seconds with a training error of 1.0845 a validation loss of 1.0840
+
+
+Epoch 16/29 completed in 0.18 seconds with a training error of 1.0817 a validation loss of 1.0808
+
+
+Epoch 17/29 completed in 0.18 seconds with a training error of 1.0782 a validation loss of 1.0767
+
+
+Epoch 18/29 completed in 0.18 seconds with a training error of 1.0738 a validation loss of 1.0713
+
+
+Epoch 19/29 completed in 0.18 seconds with a training error of 1.0678 a validation loss of 1.0640
+
+
+Epoch 20/29 completed in 0.18 seconds with a training error of 1.0599 a validation loss of 1.0540
+
+
+Epoch 21/29 completed in 0.18 seconds with a training error of 1.0482 a validation loss of 1.0389
+
+
+Epoch 22/29 completed in 0.17 seconds with a training error of 1.0300 a validation loss of 1.0149
+
+
+Epoch 23/29 completed in 0.18 seconds with a training error of 0.9990 a validation loss of 0.9737
+
+
+Epoch 24/29 completed in 0.18 seconds with a training error of 0.9424 a validation loss of 0.8826
+
+
+Epoch 25/29 completed in 0.18 seconds with a training error of 0.8162 a validation loss of 0.6700
+
+
+Epoch 26/29 completed in 0.18 seconds with a training error of 0.6564 a validation loss of 0.6586
+
+
+Epoch 27/29 completed in 0.18 seconds with a training error of 0.3424 a validation loss of 0.2459
+
+
+Epoch 28/29 completed in 0.18 seconds with a training error of 0.2531 a validation loss of 0.0708
+
+
+Epoch 29/29 completed in 0.18 seconds with a training error of 0.0512 a validation loss of 0.0305
+
+Entrenamiento completado
+
+Loss plot saved at /home/newfasant2/N101/N101-IA/Models/Classification_field_SvD_POV_5.16_SNR_5.0_1050_0samples_29ep_32bs_loss_plot.png
+
+Model saved
+
+Test Accuracy: 100.00%
+Confusion matrix saved at /home/newfasant2/N101/N101-IA/Models/Classification_field_SvD_POV_5.16_SNR_5.0_1050_0samples_29ep_32bs_confusion_matrix.png
+Tiempo por sample: 0.002452 seconds
+Error medio de test:  tensor(0.0373, device='cuda:1')
+Fin de la ejecución
+
+2025-06-27 12:04:41,079 - INFO - 
+Los argumentos son {'input_path': '/home/newfasant2/N101/N101-IA/Datasets/Reorganized/Classification_1050_0_16_f_16_d_POV_5.16_SNR_5.0', 'use_case': 'Classification', 'data_type': 'ISAR', 'num_epochs': 29}
+
+
+Using cuda:1 device, ISAR data type, Classification use case and seed 10.
+
+
+Epoch 1/29 completed in 1.11 seconds with a training error of 1.0988 a validation loss of 1.0984
+
+
+Epoch 2/29 completed in 0.89 seconds with a training error of 1.0985 a validation loss of 1.0984
+
+
+Epoch 3/29 completed in 0.89 seconds with a training error of 1.0984 a validation loss of 1.0984
+
+
+Epoch 4/29 completed in 0.89 seconds with a training error of 1.0982 a validation loss of 1.0984
+
+
+Epoch 5/29 completed in 0.89 seconds with a training error of 1.0981 a validation loss of 1.0984
+
+
+Epoch 6/29 completed in 0.89 seconds with a training error of 1.0980 a validation loss of 1.0984
+
+
+Epoch 7/29 completed in 0.89 seconds with a training error of 1.0978 a validation loss of 1.0984
+
+
+Epoch 8/29 completed in 0.89 seconds with a training error of 1.0977 a validation loss of 1.0983
+
+
+Epoch 9/29 completed in 0.89 seconds with a training error of 1.0976 a validation loss of 1.0983
+
+
+Epoch 10/29 completed in 0.89 seconds with a training error of 1.0974 a validation loss of 1.0981
+
+
+Epoch 11/29 completed in 0.89 seconds with a training error of 1.0972 a validation loss of 1.0981
+
+
+Epoch 12/29 completed in 0.89 seconds with a training error of 1.0971 a validation loss of 1.0979
+
+
+Epoch 13/29 completed in 0.89 seconds with a training error of 1.0968 a validation loss of 1.0977
+
+
+Epoch 14/29 completed in 0.89 seconds with a training error of 1.0965 a validation loss of 1.0975
+
+
+Epoch 15/29 completed in 0.89 seconds with a training error of 1.0963 a validation loss of 1.0972
+
+
+Epoch 16/29 completed in 0.89 seconds with a training error of 1.0959 a validation loss of 1.0968
+
+
+Epoch 17/29 completed in 0.89 seconds with a training error of 1.0954 a validation loss of 1.0963
+
+
+Epoch 18/29 completed in 0.89 seconds with a training error of 1.0949 a validation loss of 1.0957
+
+
+Epoch 19/29 completed in 0.89 seconds with a training error of 1.0942 a validation loss of 1.0949
+
+
+Epoch 20/29 completed in 0.89 seconds with a training error of 1.0934 a validation loss of 1.0939
+
+
+Epoch 21/29 completed in 0.89 seconds with a training error of 1.0921 a validation loss of 1.0926
+
+
+Epoch 22/29 completed in 0.89 seconds with a training error of 1.0906 a validation loss of 1.0907
+
+
+Epoch 23/29 completed in 0.89 seconds with a training error of 1.0883 a validation loss of 1.0880
+
+
+Epoch 24/29 completed in 0.89 seconds with a training error of 1.0851 a validation loss of 1.0838
+
+
+Epoch 25/29 completed in 0.89 seconds with a training error of 1.0799 a validation loss of 1.0770
+
+
+Epoch 26/29 completed in 0.89 seconds with a training error of 1.0712 a validation loss of 1.0648
+
+
+Epoch 27/29 completed in 0.89 seconds with a training error of 1.0547 a validation loss of 1.0411
+
+
+Epoch 28/29 completed in 0.89 seconds with a training error of 1.0190 a validation loss of 0.9815
+
+
+Epoch 29/29 completed in 0.89 seconds with a training error of 0.8852 a validation loss of 0.6538
+
+Entrenamiento completado
+
+Loss plot saved at /home/newfasant2/N101/N101-IA/Models/Classification_ISAR_SvD_POV_5.16_SNR_5.0_1050_0samples_29ep_32bs_loss_plot.png
+
+Model saved
+
+Test Accuracy: 100.00%
+Confusion matrix saved at /home/newfasant2/N101/N101-IA/Models/Classification_ISAR_SvD_POV_5.16_SNR_5.0_1050_0samples_29ep_32bs_confusion_matrix.png
+Tiempo por sample: 0.002923 seconds
+Error medio de test:  tensor(0.6598, device='cuda:1')
+Fin de la ejecución
+
+2025-06-27 12:04:49,614 - INFO - 
+Los argumentos son {'input_path': '/home/newfasant2/N101/N101-IA/Datasets/Reorganized/Classification_1050_0_16_f_16_d_POV_5.16_SNR_5.0', 'use_case': 'Classification', 'data_type': 'field_ph_npy', 'num_epochs': 29}
+
+
+Using cuda:1 device, field_ph_npy data type, Classification use case and seed 10.
+
+
+Epoch 1/29 completed in 0.43 seconds with a training error of 1.0980 a validation loss of 1.0972
+
+
+Epoch 2/29 completed in 0.18 seconds with a training error of 1.0967 a validation loss of 1.0962
+
+
+Epoch 3/29 completed in 0.18 seconds with a training error of 1.0956 a validation loss of 1.0952
+
+
+Epoch 4/29 completed in 0.17 seconds with a training error of 1.0943 a validation loss of 1.0941
+
+
+Epoch 5/29 completed in 0.16 seconds with a training error of 1.0930 a validation loss of 1.0928
+
+
+Epoch 6/29 completed in 0.17 seconds with a training error of 1.0915 a validation loss of 1.0913
+
+
+Epoch 7/29 completed in 0.16 seconds with a training error of 1.0898 a validation loss of 1.0894
+
+
+Epoch 8/29 completed in 0.16 seconds with a training error of 1.0877 a validation loss of 1.0870
+
+
+Epoch 9/29 completed in 0.16 seconds with a training error of 1.0853 a validation loss of 1.0843
+
+
+Epoch 10/29 completed in 0.16 seconds with a training error of 1.0819 a validation loss of 1.0805
+
+
+Epoch 11/29 completed in 0.16 seconds with a training error of 1.0779 a validation loss of 1.0760
+
+
+Epoch 12/29 completed in 0.17 seconds with a training error of 1.0727 a validation loss of 1.0702
+
+
+Epoch 13/29 completed in 0.17 seconds with a training error of 1.0654 a validation loss of 1.0612
+
+
+Epoch 14/29 completed in 0.16 seconds with a training error of 1.0546 a validation loss of 1.0478
+
+
+Epoch 15/29 completed in 0.16 seconds with a training error of 1.0395 a validation loss of 1.0301
+
+
+Epoch 16/29 completed in 0.16 seconds with a training error of 1.0136 a validation loss of 0.9931
+
+
+Epoch 17/29 completed in 0.16 seconds with a training error of 0.9643 a validation loss of 0.9205
+
+
+Epoch 18/29 completed in 0.16 seconds with a training error of 0.8593 a validation loss of 0.7687
+
+
+Epoch 19/29 completed in 0.18 seconds with a training error of 0.6508 a validation loss of 0.6458
+
+
+Epoch 20/29 completed in 0.18 seconds with a training error of 0.4255 a validation loss of 0.1468
+
+
+Epoch 21/29 completed in 0.18 seconds with a training error of 0.3077 a validation loss of 0.0684
+
+
+Epoch 22/29 completed in 0.17 seconds with a training error of 0.0512 a validation loss of 0.0272
+
+
+Epoch 23/29 completed in 0.17 seconds with a training error of 0.0239 a validation loss of 0.0129
+
+
+Epoch 24/29 completed in 0.17 seconds with a training error of 0.0154 a validation loss of 0.0087
+
+
+Epoch 25/29 completed in 0.17 seconds with a training error of 0.0102 a validation loss of 0.0060
+
+
+Epoch 26/29 completed in 0.17 seconds with a training error of 0.0078 a validation loss of 0.0047
+
+
+Epoch 27/29 completed in 0.17 seconds with a training error of 0.0055 a validation loss of 0.0042
+
+
+Epoch 28/29 completed in 0.18 seconds with a training error of 0.0047 a validation loss of 0.0030
+
+
+Epoch 29/29 completed in 0.17 seconds with a training error of 0.0040 a validation loss of 0.0028
+
+Entrenamiento completado
+
+Loss plot saved at /home/newfasant2/N101/N101-IA/Models/Classification_field_ph_npy_SvD_POV_5.16_SNR_5.0_1050_0samples_29ep_32bs_loss_plot.png
+
+Model saved
+
+Test Accuracy: 100.00%
+Confusion matrix saved at /home/newfasant2/N101/N101-IA/Models/Classification_field_ph_npy_SvD_POV_5.16_SNR_5.0_1050_0samples_29ep_32bs_confusion_matrix.png
+Tiempo por sample: 0.002539 seconds
+Error medio de test:  tensor(0.0043, device='cuda:1')
+Fin de la ejecución
+
+2025-06-27 12:04:58,256 - INFO - 
+Los argumentos son {'input_path': '/home/newfasant2/N101/N101-IA/Datasets/Reorganized/Classification_1050_0_16_f_16_d_POV_5.16_SNR_5.0', 'use_case': 'Classification', 'data_type': 'npy', 'num_epochs': 31}
+
+
+Using cuda:1 device, npy data type, Classification use case and seed 10.
+
+
+Epoch 1/31 completed in 0.42 seconds with a training error of 1.0986 a validation loss of 1.0989
+
+
+Epoch 2/31 completed in 0.18 seconds with a training error of 1.0985 a validation loss of 1.0990
+
+
+Epoch 3/31 completed in 0.18 seconds with a training error of 1.0985 a validation loss of 1.0990
+
+
+Epoch 4/31 completed in 0.18 seconds with a training error of 1.0984 a validation loss of 1.0991
+
+
+Epoch 5/31 completed in 0.18 seconds with a training error of 1.0983 a validation loss of 1.0992
+
+
+Epoch 6/31 completed in 0.18 seconds with a training error of 1.0983 a validation loss of 1.0992
+
+
+Epoch 7/31 completed in 0.18 seconds with a training error of 1.0983 a validation loss of 1.0993
+
+
+Epoch 8/31 completed in 0.18 seconds with a training error of 1.0983 a validation loss of 1.0993
+
+
+Epoch 9/31 completed in 0.18 seconds with a training error of 1.0983 a validation loss of 1.0993
+
+
+Epoch 10/31 completed in 0.18 seconds with a training error of 1.0982 a validation loss of 1.0994
+
+
+Epoch 11/31 completed in 0.18 seconds with a training error of 1.0982 a validation loss of 1.0994
+
+
+Epoch 12/31 completed in 0.17 seconds with a training error of 1.0982 a validation loss of 1.0994
+
+
+Epoch 13/31 completed in 0.17 seconds with a training error of 1.0981 a validation loss of 1.0995
+
+
+Epoch 14/31 completed in 0.16 seconds with a training error of 1.0981 a validation loss of 1.0995
+
+
+Epoch 15/31 completed in 0.16 seconds with a training error of 1.0982 a validation loss of 1.0995
+
+
+Epoch 16/31 completed in 0.16 seconds with a training error of 1.0981 a validation loss of 1.0995
+
+
+Epoch 17/31 completed in 0.16 seconds with a training error of 1.0980 a validation loss of 1.0995
+
+
+Epoch 18/31 completed in 0.16 seconds with a training error of 1.0980 a validation loss of 1.0995
+
+
+Epoch 19/31 completed in 0.16 seconds with a training error of 1.0980 a validation loss of 1.0995
+
+
+Epoch 20/31 completed in 0.16 seconds with a training error of 1.0980 a validation loss of 1.0995
+
+
+Epoch 21/31 completed in 0.16 seconds with a training error of 1.0980 a validation loss of 1.0995
+
+
+Epoch 22/31 completed in 0.16 seconds with a training error of 1.0979 a validation loss of 1.0995
+
+
+Epoch 23/31 completed in 0.16 seconds with a training error of 1.0979 a validation loss of 1.0995
+
+
+Epoch 24/31 completed in 0.16 seconds with a training error of 1.0979 a validation loss of 1.0995
+
+
+Epoch 25/31 completed in 0.16 seconds with a training error of 1.0979 a validation loss of 1.0995
+
+
+Epoch 26/31 completed in 0.16 seconds with a training error of 1.0979 a validation loss of 1.0994
+
+
+Epoch 27/31 completed in 0.17 seconds with a training error of 1.0978 a validation loss of 1.0994
+
+
+Epoch 28/31 completed in 0.16 seconds with a training error of 1.0979 a validation loss of 1.0994
+
+
+Epoch 29/31 completed in 0.17 seconds with a training error of 1.0978 a validation loss of 1.0994
+
+
+Epoch 30/31 completed in 0.16 seconds with a training error of 1.0978 a validation loss of 1.0994
+
+
+Early stopping triggered after 20 epochs.
+
+Entrenamiento completado
+
+Loss plot saved at /home/newfasant2/N101/N101-IA/Models/Classification_npy_SvD_POV_5.16_SNR_5.0_1050_0samples_31ep_32bs_loss_plot.png
+
+Model saved
+
+Test Accuracy: 31.01%
+Confusion matrix saved at /home/newfasant2/N101/N101-IA/Models/Classification_npy_SvD_POV_5.16_SNR_5.0_1050_0samples_31ep_32bs_confusion_matrix.png
+Tiempo por sample: 0.002449 seconds
+Error medio de test:  tensor(1.1005, device='cuda:1')
+Fin de la ejecución
+
+2025-06-27 12:05:07,406 - INFO - 
+Los argumentos son {'input_path': '/home/newfasant2/N101/N101-IA/Datasets/Reorganized/Classification_1050_0_16_f_16_d_POV_5.16_SNR_5.0', 'use_case': 'Classification', 'data_type': 'field', 'num_epochs': 31}
+
+
+Using cuda:1 device, field data type, Classification use case and seed 10.
+
+
+Epoch 1/31 completed in 0.44 seconds with a training error of 1.0986 a validation loss of 1.0984
+
+
+Epoch 2/31 completed in 0.18 seconds with a training error of 1.0979 a validation loss of 1.0979
+
+
+Epoch 3/31 completed in 0.18 seconds with a training error of 1.0973 a validation loss of 1.0974
+
+
+Epoch 4/31 completed in 0.17 seconds with a training error of 1.0967 a validation loss of 1.0969
+
+
+Epoch 5/31 completed in 0.17 seconds with a training error of 1.0960 a validation loss of 1.0964
+
+
+Epoch 6/31 completed in 0.17 seconds with a training error of 1.0954 a validation loss of 1.0958
+
+
+Epoch 7/31 completed in 0.17 seconds with a training error of 1.0947 a validation loss of 1.0951
+
+
+Epoch 8/31 completed in 0.17 seconds with a training error of 1.0940 a validation loss of 1.0944
+
+
+Epoch 9/31 completed in 0.17 seconds with a training error of 1.0932 a validation loss of 1.0935
+
+
+Epoch 10/31 completed in 0.17 seconds with a training error of 1.0922 a validation loss of 1.0925
+
+
+Epoch 11/31 completed in 0.17 seconds with a training error of 1.0911 a validation loss of 1.0914
+
+
+Epoch 12/31 completed in 0.17 seconds with a training error of 1.0899 a validation loss of 1.0901
+
+
+Epoch 13/31 completed in 0.17 seconds with a training error of 1.0884 a validation loss of 1.0884
+
+
+Epoch 14/31 completed in 0.17 seconds with a training error of 1.0865 a validation loss of 1.0862
+
+
+Epoch 15/31 completed in 0.17 seconds with a training error of 1.0845 a validation loss of 1.0840
+
+
+Epoch 16/31 completed in 0.17 seconds with a training error of 1.0817 a validation loss of 1.0808
+
+
+Epoch 17/31 completed in 0.18 seconds with a training error of 1.0782 a validation loss of 1.0767
+
+
+Epoch 18/31 completed in 0.17 seconds with a training error of 1.0738 a validation loss of 1.0713
+
+
+Epoch 19/31 completed in 0.17 seconds with a training error of 1.0678 a validation loss of 1.0640
+
+
+Epoch 20/31 completed in 0.17 seconds with a training error of 1.0599 a validation loss of 1.0540
+
+
+Epoch 21/31 completed in 0.17 seconds with a training error of 1.0482 a validation loss of 1.0389
+
+
+Epoch 22/31 completed in 0.17 seconds with a training error of 1.0300 a validation loss of 1.0149
+
+
+Epoch 23/31 completed in 0.17 seconds with a training error of 0.9990 a validation loss of 0.9737
+
+
+Epoch 24/31 completed in 0.17 seconds with a training error of 0.9424 a validation loss of 0.8826
+
+
+Epoch 25/31 completed in 0.17 seconds with a training error of 0.8162 a validation loss of 0.6700
+
+
+Epoch 26/31 completed in 0.17 seconds with a training error of 0.6564 a validation loss of 0.6586
+
+
+Epoch 27/31 completed in 0.18 seconds with a training error of 0.3424 a validation loss of 0.2459
+
+
+Epoch 28/31 completed in 0.16 seconds with a training error of 0.2531 a validation loss of 0.0708
+
+
+Epoch 29/31 completed in 0.16 seconds with a training error of 0.0512 a validation loss of 0.0305
+
+
+Epoch 30/31 completed in 0.16 seconds with a training error of 0.0234 a validation loss of 0.0125
+
+
+Epoch 31/31 completed in 0.16 seconds with a training error of 0.0156 a validation loss of 0.0080
+
+Entrenamiento completado
+
+Loss plot saved at /home/newfasant2/N101/N101-IA/Models/Classification_field_SvD_POV_5.16_SNR_5.0_1050_0samples_31ep_32bs_loss_plot.png
+
+Model saved
+
+Test Accuracy: 100.00%
+Confusion matrix saved at /home/newfasant2/N101/N101-IA/Models/Classification_field_SvD_POV_5.16_SNR_5.0_1050_0samples_31ep_32bs_confusion_matrix.png
+Tiempo por sample: 0.002498 seconds
+Error medio de test:  tensor(0.0130, device='cuda:1')
+Fin de la ejecución
+
+2025-06-27 12:05:38,706 - INFO - 
+Los argumentos son {'input_path': '/home/newfasant2/N101/N101-IA/Datasets/Reorganized/Classification_1050_0_16_f_16_d_POV_5.16_SNR_5.0', 'use_case': 'Classification', 'data_type': 'ISAR', 'num_epochs': 31}
+
+
+Using cuda:1 device, ISAR data type, Classification use case and seed 10.
+
+
+Epoch 1/31 completed in 1.13 seconds with a training error of 1.0988 a validation loss of 1.0984
+
+
+Epoch 2/31 completed in 0.90 seconds with a training error of 1.0985 a validation loss of 1.0984
+
+
+Epoch 3/31 completed in 0.90 seconds with a training error of 1.0984 a validation loss of 1.0984
+
+
+Epoch 4/31 completed in 0.90 seconds with a training error of 1.0982 a validation loss of 1.0984
+
+
+Epoch 5/31 completed in 0.90 seconds with a training error of 1.0981 a validation loss of 1.0984
+
+
+Epoch 6/31 completed in 0.90 seconds with a training error of 1.0980 a validation loss of 1.0984
+
+
+Epoch 7/31 completed in 0.89 seconds with a training error of 1.0978 a validation loss of 1.0984
+
+
+Epoch 8/31 completed in 0.89 seconds with a training error of 1.0977 a validation loss of 1.0983
+
+
+Epoch 9/31 completed in 0.89 seconds with a training error of 1.0976 a validation loss of 1.0983
+
+
+Epoch 10/31 completed in 0.89 seconds with a training error of 1.0974 a validation loss of 1.0981
+
+
+Epoch 11/31 completed in 0.89 seconds with a training error of 1.0972 a validation loss of 1.0981
+
+
+Epoch 12/31 completed in 0.89 seconds with a training error of 1.0971 a validation loss of 1.0979
+
+
+Epoch 13/31 completed in 0.89 seconds with a training error of 1.0968 a validation loss of 1.0977
+
+
+Epoch 14/31 completed in 0.89 seconds with a training error of 1.0965 a validation loss of 1.0975
+
+
+Epoch 15/31 completed in 0.89 seconds with a training error of 1.0963 a validation loss of 1.0972
+
+
+Epoch 16/31 completed in 0.89 seconds with a training error of 1.0959 a validation loss of 1.0968
+
+
+Epoch 17/31 completed in 0.89 seconds with a training error of 1.0954 a validation loss of 1.0963
+
+
+Epoch 18/31 completed in 0.89 seconds with a training error of 1.0949 a validation loss of 1.0957
+
+
+Epoch 19/31 completed in 0.89 seconds with a training error of 1.0942 a validation loss of 1.0949
+
+
+Epoch 20/31 completed in 0.89 seconds with a training error of 1.0934 a validation loss of 1.0939
+
+
+Epoch 21/31 completed in 0.89 seconds with a training error of 1.0921 a validation loss of 1.0926
+
+
+Epoch 22/31 completed in 0.89 seconds with a training error of 1.0906 a validation loss of 1.0907
+
+
+Epoch 23/31 completed in 0.89 seconds with a training error of 1.0883 a validation loss of 1.0880
+
+
+Epoch 24/31 completed in 0.89 seconds with a training error of 1.0851 a validation loss of 1.0838
+
+
+Epoch 25/31 completed in 0.89 seconds with a training error of 1.0799 a validation loss of 1.0770
+
+
+Epoch 26/31 completed in 0.89 seconds with a training error of 1.0712 a validation loss of 1.0648
+
+
+Epoch 27/31 completed in 0.89 seconds with a training error of 1.0547 a validation loss of 1.0411
+
+
+Epoch 28/31 completed in 0.89 seconds with a training error of 1.0190 a validation loss of 0.9815
+
+
+Epoch 29/31 completed in 0.89 seconds with a training error of 0.8852 a validation loss of 0.6538
+
+
+Epoch 30/31 completed in 0.89 seconds with a training error of 0.2693 a validation loss of 0.0388
+
+
+Epoch 31/31 completed in 0.89 seconds with a training error of 0.0201 a validation loss of 0.0090
+
+Entrenamiento completado
+
+Loss plot saved at /home/newfasant2/N101/N101-IA/Models/Classification_ISAR_SvD_POV_5.16_SNR_5.0_1050_0samples_31ep_32bs_loss_plot.png
+
+Model saved
+
+Test Accuracy: 100.00%
+Confusion matrix saved at /home/newfasant2/N101/N101-IA/Models/Classification_ISAR_SvD_POV_5.16_SNR_5.0_1050_0samples_31ep_32bs_confusion_matrix.png
+Tiempo por sample: 0.002819 seconds
+Error medio de test:  tensor(0.0103, device='cuda:1')
+Fin de la ejecución
+
+2025-06-27 12:05:47,974 - INFO - 
+Los argumentos son {'input_path': '/home/newfasant2/N101/N101-IA/Datasets/Reorganized/Classification_1050_0_16_f_16_d_POV_5.16_SNR_5.0', 'use_case': 'Classification', 'data_type': 'field_ph_npy', 'num_epochs': 31}
+
+
+Using cuda:1 device, field_ph_npy data type, Classification use case and seed 10.
+
+
+Epoch 1/31 completed in 0.42 seconds with a training error of 1.0980 a validation loss of 1.0972
+
+
+Epoch 2/31 completed in 0.17 seconds with a training error of 1.0967 a validation loss of 1.0962
+
+
+Epoch 3/31 completed in 0.18 seconds with a training error of 1.0956 a validation loss of 1.0952
+
+
+Epoch 4/31 completed in 0.18 seconds with a training error of 1.0943 a validation loss of 1.0941
+
+
+Epoch 5/31 completed in 0.19 seconds with a training error of 1.0930 a validation loss of 1.0928
+
+
+Epoch 6/31 completed in 0.19 seconds with a training error of 1.0915 a validation loss of 1.0913
+
+
+Epoch 7/31 completed in 0.18 seconds with a training error of 1.0898 a validation loss of 1.0894
+
+
+Epoch 8/31 completed in 0.18 seconds with a training error of 1.0877 a validation loss of 1.0870
+
+
+Epoch 9/31 completed in 0.18 seconds with a training error of 1.0853 a validation loss of 1.0843
+
+
+Epoch 10/31 completed in 0.18 seconds with a training error of 1.0819 a validation loss of 1.0805
+
+
+Epoch 11/31 completed in 0.18 seconds with a training error of 1.0779 a validation loss of 1.0760
+
+
+Epoch 12/31 completed in 0.18 seconds with a training error of 1.0727 a validation loss of 1.0702
+
+
+Epoch 13/31 completed in 0.18 seconds with a training error of 1.0654 a validation loss of 1.0612
+
+
+Epoch 14/31 completed in 0.18 seconds with a training error of 1.0546 a validation loss of 1.0478
+
+
+Epoch 15/31 completed in 0.19 seconds with a training error of 1.0395 a validation loss of 1.0301
+
+
+Epoch 16/31 completed in 0.18 seconds with a training error of 1.0136 a validation loss of 0.9931
+
+
+Epoch 17/31 completed in 0.18 seconds with a training error of 0.9643 a validation loss of 0.9205
+
+
+Epoch 18/31 completed in 0.18 seconds with a training error of 0.8593 a validation loss of 0.7687
+
+
+Epoch 19/31 completed in 0.18 seconds with a training error of 0.6508 a validation loss of 0.6458
+
+
+Epoch 20/31 completed in 0.18 seconds with a training error of 0.4255 a validation loss of 0.1468
+
+
+Epoch 21/31 completed in 0.19 seconds with a training error of 0.3077 a validation loss of 0.0684
+
+
+Epoch 22/31 completed in 0.18 seconds with a training error of 0.0512 a validation loss of 0.0272
+
+
+Epoch 23/31 completed in 0.18 seconds with a training error of 0.0239 a validation loss of 0.0129
+
+
+Epoch 24/31 completed in 0.17 seconds with a training error of 0.0154 a validation loss of 0.0087
+
+
+Epoch 25/31 completed in 0.16 seconds with a training error of 0.0102 a validation loss of 0.0060
+
+
+Epoch 26/31 completed in 0.16 seconds with a training error of 0.0078 a validation loss of 0.0047
+
+
+Epoch 27/31 completed in 0.16 seconds with a training error of 0.0055 a validation loss of 0.0042
+
+
+Epoch 28/31 completed in 0.16 seconds with a training error of 0.0047 a validation loss of 0.0030
+
+
+Epoch 29/31 completed in 0.17 seconds with a training error of 0.0040 a validation loss of 0.0028
+
+
+Epoch 30/31 completed in 0.16 seconds with a training error of 0.0032 a validation loss of 0.0022
+
+
+Epoch 31/31 completed in 0.17 seconds with a training error of 0.0031 a validation loss of 0.0020
+
+Entrenamiento completado
+
+Loss plot saved at /home/newfasant2/N101/N101-IA/Models/Classification_field_ph_npy_SvD_POV_5.16_SNR_5.0_1050_0samples_31ep_32bs_loss_plot.png
+
+Model saved
+
+Test Accuracy: 100.00%
+Confusion matrix saved at /home/newfasant2/N101/N101-IA/Models/Classification_field_ph_npy_SvD_POV_5.16_SNR_5.0_1050_0samples_31ep_32bs_confusion_matrix.png
+Tiempo por sample: 0.002582 seconds
+Error medio de test:  tensor(0.0032, device='cuda:1')
+Fin de la ejecución
+
+2025-06-27 12:06:16,379 - INFO - 
+Los argumentos son {'input_path': '/home/newfasant2/N101/N101-IA/Datasets/Reorganized/Classification_1050_0_16_f_16_d_POV_5.16_SNR_5.0', 'use_case': 'Classification', 'data_type': 'npy', 'num_epochs': 146}
+
+
+Using cuda:1 device, npy data type, Classification use case and seed 10.
+
+
+Epoch 1/146 completed in 0.44 seconds with a training error of 1.0986 a validation loss of 1.0989
+
+
+Epoch 2/146 completed in 0.18 seconds with a training error of 1.0985 a validation loss of 1.0990
+
+
+Epoch 3/146 completed in 0.17 seconds with a training error of 1.0985 a validation loss of 1.0990
+
+
+Epoch 4/146 completed in 0.17 seconds with a training error of 1.0984 a validation loss of 1.0991
+
+
+Epoch 5/146 completed in 0.17 seconds with a training error of 1.0983 a validation loss of 1.0992
+
+
+Epoch 6/146 completed in 0.17 seconds with a training error of 1.0983 a validation loss of 1.0992
+
+
+Epoch 7/146 completed in 0.20 seconds with a training error of 1.0983 a validation loss of 1.0993
+
+
+Epoch 8/146 completed in 0.19 seconds with a training error of 1.0983 a validation loss of 1.0993
+
+
+Epoch 9/146 completed in 0.18 seconds with a training error of 1.0983 a validation loss of 1.0993
+
+
+Epoch 10/146 completed in 0.19 seconds with a training error of 1.0982 a validation loss of 1.0994
+
+
+Epoch 11/146 completed in 0.19 seconds with a training error of 1.0982 a validation loss of 1.0994
+
+
+Epoch 12/146 completed in 0.18 seconds with a training error of 1.0982 a validation loss of 1.0994
+
+
+Epoch 13/146 completed in 0.18 seconds with a training error of 1.0981 a validation loss of 1.0995
+
+
+Epoch 14/146 completed in 0.17 seconds with a training error of 1.0981 a validation loss of 1.0995
+
+
+Epoch 15/146 completed in 0.19 seconds with a training error of 1.0982 a validation loss of 1.0995
+
+
+Epoch 16/146 completed in 0.18 seconds with a training error of 1.0981 a validation loss of 1.0995
+
+
+Epoch 17/146 completed in 0.17 seconds with a training error of 1.0980 a validation loss of 1.0995
+
+
+Epoch 18/146 completed in 0.17 seconds with a training error of 1.0980 a validation loss of 1.0995
+
+
+Epoch 19/146 completed in 0.17 seconds with a training error of 1.0980 a validation loss of 1.0995
+
+
+Epoch 20/146 completed in 0.17 seconds with a training error of 1.0980 a validation loss of 1.0995
+
+
+Epoch 21/146 completed in 0.18 seconds with a training error of 1.0980 a validation loss of 1.0995
+
+
+Epoch 22/146 completed in 0.18 seconds with a training error of 1.0979 a validation loss of 1.0995
+
+
+Epoch 23/146 completed in 0.18 seconds with a training error of 1.0979 a validation loss of 1.0995
+
+
+Epoch 24/146 completed in 0.17 seconds with a training error of 1.0979 a validation loss of 1.0995
+
+
+Epoch 25/146 completed in 0.17 seconds with a training error of 1.0979 a validation loss of 1.0995
+
+
+Epoch 26/146 completed in 0.17 seconds with a training error of 1.0979 a validation loss of 1.0994
+
+
+Epoch 27/146 completed in 0.17 seconds with a training error of 1.0978 a validation loss of 1.0994
+
+
+Epoch 28/146 completed in 0.17 seconds with a training error of 1.0979 a validation loss of 1.0994
+
+
+Epoch 29/146 completed in 0.19 seconds with a training error of 1.0978 a validation loss of 1.0994
+
+
+Epoch 30/146 completed in 0.17 seconds with a training error of 1.0978 a validation loss of 1.0994
+
+
+Epoch 31/146 completed in 0.17 seconds with a training error of 1.0977 a validation loss of 1.0993
+
+
+Epoch 32/146 completed in 0.17 seconds with a training error of 1.0977 a validation loss of 1.0993
+
+
+Epoch 33/146 completed in 0.17 seconds with a training error of 1.0977 a validation loss of 1.0993
+
+
+Epoch 34/146 completed in 0.17 seconds with a training error of 1.0976 a validation loss of 1.0993
+
+
+Epoch 35/146 completed in 0.17 seconds with a training error of 1.0976 a validation loss of 1.0993
+
+
+Epoch 36/146 completed in 0.18 seconds with a training error of 1.0976 a validation loss of 1.0992
+
+
+Epoch 37/146 completed in 0.17 seconds with a training error of 1.0976 a validation loss of 1.0992
+
+
+Epoch 38/146 completed in 0.17 seconds with a training error of 1.0976 a validation loss of 1.0992
+
+
+Epoch 39/146 completed in 0.17 seconds with a training error of 1.0976 a validation loss of 1.0991
+
+
+Epoch 40/146 completed in 0.17 seconds with a training error of 1.0975 a validation loss of 1.0991
+
+
+Epoch 41/146 completed in 0.17 seconds with a training error of 1.0975 a validation loss of 1.0991
+
+
+Epoch 42/146 completed in 0.16 seconds with a training error of 1.0975 a validation loss of 1.0990
+
+
+Epoch 43/146 completed in 0.16 seconds with a training error of 1.0973 a validation loss of 1.0990
+
+
+Epoch 44/146 completed in 0.16 seconds with a training error of 1.0973 a validation loss of 1.0990
+
+
+Epoch 45/146 completed in 0.16 seconds with a training error of 1.0972 a validation loss of 1.0989
+
+
+Epoch 46/146 completed in 0.16 seconds with a training error of 1.0972 a validation loss of 1.0989
+
+
+Epoch 47/146 completed in 0.16 seconds with a training error of 1.0972 a validation loss of 1.0989
+
+
+Epoch 48/146 completed in 0.16 seconds with a training error of 1.0971 a validation loss of 1.0988
+
+
+Epoch 49/146 completed in 0.16 seconds with a training error of 1.0971 a validation loss of 1.0988
+
+
+Epoch 50/146 completed in 0.16 seconds with a training error of 1.0971 a validation loss of 1.0988
+
+
+Epoch 51/146 completed in 0.16 seconds with a training error of 1.0970 a validation loss of 1.0987
+
+
+Epoch 52/146 completed in 0.16 seconds with a training error of 1.0970 a validation loss of 1.0986
+
+
+Epoch 53/146 completed in 0.16 seconds with a training error of 1.0969 a validation loss of 1.0985
+
+
+Epoch 54/146 completed in 0.16 seconds with a training error of 1.0968 a validation loss of 1.0985
+
+
+Epoch 55/146 completed in 0.17 seconds with a training error of 1.0968 a validation loss of 1.0984
+
+
+Epoch 56/146 completed in 0.16 seconds with a training error of 1.0967 a validation loss of 1.0984
+
+
+Epoch 57/146 completed in 0.16 seconds with a training error of 1.0966 a validation loss of 1.0983
+
+
+Epoch 58/146 completed in 0.16 seconds with a training error of 1.0965 a validation loss of 1.0982
+
+
+Epoch 59/146 completed in 0.16 seconds with a training error of 1.0964 a validation loss of 1.0982
+
+
+Epoch 60/146 completed in 0.16 seconds with a training error of 1.0964 a validation loss of 1.0981
+
+
+Epoch 61/146 completed in 0.17 seconds with a training error of 1.0963 a validation loss of 1.0980
+
+
+Epoch 62/146 completed in 0.17 seconds with a training error of 1.0963 a validation loss of 1.0979
+
+
+Epoch 63/146 completed in 0.16 seconds with a training error of 1.0961 a validation loss of 1.0978
+
+
+Epoch 64/146 completed in 0.16 seconds with a training error of 1.0959 a validation loss of 1.0977
+
+
+Epoch 65/146 completed in 0.17 seconds with a training error of 1.0959 a validation loss of 1.0976
+
+
+Epoch 66/146 completed in 0.16 seconds with a training error of 1.0957 a validation loss of 1.0975
+
+
+Epoch 67/146 completed in 0.16 seconds with a training error of 1.0956 a validation loss of 1.0974
+
+
+Epoch 68/146 completed in 0.16 seconds with a training error of 1.0955 a validation loss of 1.0972
+
+
+Epoch 69/146 completed in 0.17 seconds with a training error of 1.0954 a validation loss of 1.0971
+
+
+Epoch 70/146 completed in 0.16 seconds with a training error of 1.0951 a validation loss of 1.0969
+
+
+Epoch 71/146 completed in 0.16 seconds with a training error of 1.0950 a validation loss of 1.0967
+
+
+Epoch 72/146 completed in 0.17 seconds with a training error of 1.0948 a validation loss of 1.0966
+
+
+Epoch 73/146 completed in 0.16 seconds with a training error of 1.0946 a validation loss of 1.0964
+
+
+Epoch 74/146 completed in 0.16 seconds with a training error of 1.0943 a validation loss of 1.0962
+
+
+Epoch 75/146 completed in 0.16 seconds with a training error of 1.0941 a validation loss of 1.0959
+
+
+Epoch 76/146 completed in 0.16 seconds with a training error of 1.0938 a validation loss of 1.0957
+
+
+Epoch 77/146 completed in 0.16 seconds with a training error of 1.0935 a validation loss of 1.0954
+
+
+Epoch 78/146 completed in 0.16 seconds with a training error of 1.0931 a validation loss of 1.0951
+
+
+Epoch 79/146 completed in 0.16 seconds with a training error of 1.0928 a validation loss of 1.0947
+
+
+Epoch 80/146 completed in 0.16 seconds with a training error of 1.0924 a validation loss of 1.0943
+
+
+Epoch 81/146 completed in 0.16 seconds with a training error of 1.0920 a validation loss of 1.0939
+
+
+Epoch 82/146 completed in 0.17 seconds with a training error of 1.0914 a validation loss of 1.0933
+
+
+Epoch 83/146 completed in 0.16 seconds with a training error of 1.0908 a validation loss of 1.0927
+
+
+Epoch 84/146 completed in 0.16 seconds with a training error of 1.0902 a validation loss of 1.0921
+
+
+Epoch 85/146 completed in 0.16 seconds with a training error of 1.0895 a validation loss of 1.0913
+
+
+Epoch 86/146 completed in 0.16 seconds with a training error of 1.0886 a validation loss of 1.0905
+
+
+Epoch 87/146 completed in 0.16 seconds with a training error of 1.0877 a validation loss of 1.0894
+
+
+Epoch 88/146 completed in 0.16 seconds with a training error of 1.0865 a validation loss of 1.0883
+
+
+Epoch 89/146 completed in 0.17 seconds with a training error of 1.0851 a validation loss of 1.0869
+
+
+Epoch 90/146 completed in 0.17 seconds with a training error of 1.0836 a validation loss of 1.0853
+
+
+Epoch 91/146 completed in 0.16 seconds with a training error of 1.0817 a validation loss of 1.0834
+
+
+Epoch 92/146 completed in 0.16 seconds with a training error of 1.0794 a validation loss of 1.0809
+
+
+Epoch 93/146 completed in 0.16 seconds with a training error of 1.0767 a validation loss of 1.0779
+
+
+Epoch 94/146 completed in 0.17 seconds with a training error of 1.0733 a validation loss of 1.0744
+
+
+Epoch 95/146 completed in 0.17 seconds with a training error of 1.0692 a validation loss of 1.0696
+
+
+Epoch 96/146 completed in 0.16 seconds with a training error of 1.0636 a validation loss of 1.0636
+
+
+Epoch 97/146 completed in 0.16 seconds with a training error of 1.0565 a validation loss of 1.0557
+
+
+Epoch 98/146 completed in 0.16 seconds with a training error of 1.0470 a validation loss of 1.0449
+
+
+Epoch 99/146 completed in 0.17 seconds with a training error of 1.0336 a validation loss of 1.0297
+
+
+Epoch 100/146 completed in 0.16 seconds with a training error of 1.0144 a validation loss of 1.0079
+
+
+Epoch 101/146 completed in 0.16 seconds with a training error of 0.9858 a validation loss of 0.9742
+
+
+Epoch 102/146 completed in 0.16 seconds with a training error of 0.9424 a validation loss of 0.9255
+
+
+Epoch 103/146 completed in 0.16 seconds with a training error of 0.8815 a validation loss of 0.8589
+
+
+Epoch 104/146 completed in 0.16 seconds with a training error of 0.8113 a validation loss of 0.7908
+
+
+Epoch 105/146 completed in 0.17 seconds with a training error of 0.7486 a validation loss of 0.7332
+
+
+Epoch 106/146 completed in 0.17 seconds with a training error of 0.6964 a validation loss of 0.6892
+
+
+Epoch 107/146 completed in 0.16 seconds with a training error of 0.6562 a validation loss of 0.6550
+
+
+Epoch 108/146 completed in 0.16 seconds with a training error of 0.6273 a validation loss of 0.6301
+
+
+Epoch 109/146 completed in 0.17 seconds with a training error of 0.6029 a validation loss of 0.6103
+
+
+Epoch 110/146 completed in 0.16 seconds with a training error of 0.5817 a validation loss of 0.5921
+
+
+Epoch 111/146 completed in 0.16 seconds with a training error of 0.5628 a validation loss of 0.5779
+
+
+Epoch 112/146 completed in 0.16 seconds with a training error of 0.5509 a validation loss of 0.5664
+
+
+Epoch 113/146 completed in 0.16 seconds with a training error of 0.5391 a validation loss of 0.5550
+
+
+Epoch 114/146 completed in 0.16 seconds with a training error of 0.5271 a validation loss of 0.5452
+
+
+Epoch 115/146 completed in 0.17 seconds with a training error of 0.5176 a validation loss of 0.5371
+
+
+Epoch 116/146 completed in 0.16 seconds with a training error of 0.5096 a validation loss of 0.5289
+
+
+Epoch 117/146 completed in 0.16 seconds with a training error of 0.5021 a validation loss of 0.5222
+
+
+Epoch 118/146 completed in 0.16 seconds with a training error of 0.4957 a validation loss of 0.5162
+
+
+Epoch 119/146 completed in 0.17 seconds with a training error of 0.4900 a validation loss of 0.5106
+
+
+Epoch 120/146 completed in 0.17 seconds with a training error of 0.4843 a validation loss of 0.5058
+
+
+Epoch 121/146 completed in 0.16 seconds with a training error of 0.4796 a validation loss of 0.5067
+
+
+Epoch 122/146 completed in 0.16 seconds with a training error of 0.4761 a validation loss of 0.4985
+
+
+Epoch 123/146 completed in 0.16 seconds with a training error of 0.4726 a validation loss of 0.4968
+
+
+Epoch 124/146 completed in 0.16 seconds with a training error of 0.4697 a validation loss of 0.4929
+
+
+Epoch 125/146 completed in 0.16 seconds with a training error of 0.4672 a validation loss of 0.4904
+
+
+Epoch 126/146 completed in 0.16 seconds with a training error of 0.4655 a validation loss of 0.4890
+
+
+Epoch 127/146 completed in 0.17 seconds with a training error of 0.4633 a validation loss of 0.4865
+
+
+Epoch 128/146 completed in 0.16 seconds with a training error of 0.4619 a validation loss of 0.4848
+
+
+Epoch 129/146 completed in 0.16 seconds with a training error of 0.4605 a validation loss of 0.4828
+
+
+Epoch 130/146 completed in 0.16 seconds with a training error of 0.4579 a validation loss of 0.4803
+
+
+Epoch 131/146 completed in 0.16 seconds with a training error of 0.4559 a validation loss of 0.4769
+
+
+Epoch 132/146 completed in 0.16 seconds with a training error of 0.4508 a validation loss of 0.4727
+
+
+Epoch 133/146 completed in 0.16 seconds with a training error of 0.4475 a validation loss of 0.4647
+
+
+Epoch 134/146 completed in 0.16 seconds with a training error of 0.4420 a validation loss of 0.4438
+
+
+Epoch 135/146 completed in 0.16 seconds with a training error of 0.5463 a validation loss of 0.4488
+
+
+Epoch 136/146 completed in 0.16 seconds with a training error of 0.4192 a validation loss of 0.4859
+
+
+Epoch 137/146 completed in 0.16 seconds with a training error of 0.4604 a validation loss of 0.4854
+
+
+Epoch 138/146 completed in 0.16 seconds with a training error of 0.4392 a validation loss of 0.3638
+
+
+Epoch 139/146 completed in 0.16 seconds with a training error of 0.4342 a validation loss of 0.3579
+
+
+Epoch 140/146 completed in 0.16 seconds with a training error of 0.5022 a validation loss of 0.4728
+
+
+Epoch 141/146 completed in 0.18 seconds with a training error of 0.3365 a validation loss of 0.2755
+
+
+Epoch 142/146 completed in 0.18 seconds with a training error of 0.3304 a validation loss of 2.6312
+
+
+Epoch 143/146 completed in 0.18 seconds with a training error of 0.4506 a validation loss of 0.1887
+
+
+Epoch 144/146 completed in 0.18 seconds with a training error of 0.1939 a validation loss of 0.3478
+
+
+Epoch 145/146 completed in 0.18 seconds with a training error of 0.2332 a validation loss of 0.0953
+
+
+Epoch 146/146 completed in 0.18 seconds with a training error of 0.0661 a validation loss of 0.0536
+
+Entrenamiento completado
+
+Loss plot saved at /home/newfasant2/N101/N101-IA/Models/Classification_npy_SvD_POV_5.16_SNR_5.0_1050_0samples_146ep_32bs_loss_plot.png
+
+Model saved
+
+Test Accuracy: 100.00%
+Confusion matrix saved at /home/newfasant2/N101/N101-IA/Models/Classification_npy_SvD_POV_5.16_SNR_5.0_1050_0samples_146ep_32bs_confusion_matrix.png
+Tiempo por sample: 0.002488 seconds
+Error medio de test:  tensor(0.0518, device='cuda:1')
+Fin de la ejecución
+
+2025-06-27 12:06:44,643 - INFO - 
+Los argumentos son {'input_path': '/home/newfasant2/N101/N101-IA/Datasets/Reorganized/Classification_1050_0_16_f_16_d_POV_5.16_SNR_5.0', 'use_case': 'Classification', 'data_type': 'field', 'num_epochs': 146}
+
+
+Using cuda:1 device, field data type, Classification use case and seed 10.
+
+
+Epoch 1/146 completed in 0.43 seconds with a training error of 1.0986 a validation loss of 1.0984
+
+
+Epoch 2/146 completed in 0.18 seconds with a training error of 1.0979 a validation loss of 1.0979
+
+
+Epoch 3/146 completed in 0.18 seconds with a training error of 1.0973 a validation loss of 1.0974
+
+
+Epoch 4/146 completed in 0.19 seconds with a training error of 1.0967 a validation loss of 1.0969
+
+
+Epoch 5/146 completed in 0.18 seconds with a training error of 1.0960 a validation loss of 1.0964
+
+
+Epoch 6/146 completed in 0.18 seconds with a training error of 1.0954 a validation loss of 1.0958
+
+
+Epoch 7/146 completed in 0.18 seconds with a training error of 1.0947 a validation loss of 1.0951
+
+
+Epoch 8/146 completed in 0.19 seconds with a training error of 1.0940 a validation loss of 1.0944
+
+
+Epoch 9/146 completed in 0.22 seconds with a training error of 1.0932 a validation loss of 1.0935
+
+
+Epoch 10/146 completed in 0.22 seconds with a training error of 1.0922 a validation loss of 1.0925
+
+
+Epoch 11/146 completed in 0.18 seconds with a training error of 1.0911 a validation loss of 1.0914
+
+
+Epoch 12/146 completed in 0.19 seconds with a training error of 1.0899 a validation loss of 1.0901
+
+
+Epoch 13/146 completed in 0.18 seconds with a training error of 1.0884 a validation loss of 1.0884
+
+
+Epoch 14/146 completed in 0.17 seconds with a training error of 1.0865 a validation loss of 1.0862
+
+
+Epoch 15/146 completed in 0.16 seconds with a training error of 1.0845 a validation loss of 1.0840
+
+
+Epoch 16/146 completed in 0.16 seconds with a training error of 1.0817 a validation loss of 1.0808
+
+
+Epoch 17/146 completed in 0.16 seconds with a training error of 1.0782 a validation loss of 1.0767
+
+
+Epoch 18/146 completed in 0.16 seconds with a training error of 1.0738 a validation loss of 1.0713
+
+
+Epoch 19/146 completed in 0.16 seconds with a training error of 1.0678 a validation loss of 1.0640
+
+
+Epoch 20/146 completed in 0.16 seconds with a training error of 1.0599 a validation loss of 1.0540
+
+
+Epoch 21/146 completed in 0.16 seconds with a training error of 1.0482 a validation loss of 1.0389
+
+
+Epoch 22/146 completed in 0.16 seconds with a training error of 1.0300 a validation loss of 1.0149
+
+
+Epoch 23/146 completed in 0.16 seconds with a training error of 0.9990 a validation loss of 0.9737
+
+
+Epoch 24/146 completed in 0.16 seconds with a training error of 0.9424 a validation loss of 0.8826
+
+
+Epoch 25/146 completed in 0.16 seconds with a training error of 0.8162 a validation loss of 0.6700
+
+
+Epoch 26/146 completed in 0.17 seconds with a training error of 0.6564 a validation loss of 0.6586
+
+
+Epoch 27/146 completed in 0.16 seconds with a training error of 0.3424 a validation loss of 0.2459
+
+
+Epoch 28/146 completed in 0.16 seconds with a training error of 0.2531 a validation loss of 0.0708
+
+
+Epoch 29/146 completed in 0.16 seconds with a training error of 0.0512 a validation loss of 0.0305
+
+
+Epoch 30/146 completed in 0.17 seconds with a training error of 0.0234 a validation loss of 0.0125
+
+
+Epoch 31/146 completed in 0.17 seconds with a training error of 0.0156 a validation loss of 0.0080
+
+
+Epoch 32/146 completed in 0.17 seconds with a training error of 0.0101 a validation loss of 0.0092
+
+
+Epoch 33/146 completed in 0.16 seconds with a training error of 0.0083 a validation loss of 0.0061
+
+
+Epoch 34/146 completed in 0.16 seconds with a training error of 0.0062 a validation loss of 0.0041
+
+
+Epoch 35/146 completed in 0.16 seconds with a training error of 0.0048 a validation loss of 0.0049
+
+
+Epoch 36/146 completed in 0.16 seconds with a training error of 0.0042 a validation loss of 0.0032
+
+
+Epoch 37/146 completed in 0.16 seconds with a training error of 0.0034 a validation loss of 0.0030
+
+
+Epoch 38/146 completed in 0.16 seconds with a training error of 0.0030 a validation loss of 0.0020
+
+
+Epoch 39/146 completed in 0.16 seconds with a training error of 0.0025 a validation loss of 0.0016
+
+
+Epoch 40/146 completed in 0.16 seconds with a training error of 0.0023 a validation loss of 0.0015
+
+
+Epoch 41/146 completed in 0.16 seconds with a training error of 0.0021 a validation loss of 0.0014
+
+
+Epoch 42/146 completed in 0.16 seconds with a training error of 0.0019 a validation loss of 0.0012
+
+
+Epoch 43/146 completed in 0.16 seconds with a training error of 0.0017 a validation loss of 0.0012
+
+
+Epoch 44/146 completed in 0.16 seconds with a training error of 0.0015 a validation loss of 0.0010
+
+
+Epoch 45/146 completed in 0.16 seconds with a training error of 0.0014 a validation loss of 0.0010
+
+
+Epoch 46/146 completed in 0.16 seconds with a training error of 0.0013 a validation loss of 0.0010
+
+
+Epoch 47/146 completed in 0.16 seconds with a training error of 0.0012 a validation loss of 0.0008
+
+
+Epoch 48/146 completed in 0.16 seconds with a training error of 0.0011 a validation loss of 0.0008
+
+
+Epoch 49/146 completed in 0.16 seconds with a training error of 0.0011 a validation loss of 0.0008
+
+
+Epoch 50/146 completed in 0.17 seconds with a training error of 0.0010 a validation loss of 0.0007
+
+
+Epoch 51/146 completed in 0.17 seconds with a training error of 0.0009 a validation loss of 0.0008
+
+
+Epoch 52/146 completed in 0.16 seconds with a training error of 0.0009 a validation loss of 0.0007
+
+
+Epoch 53/146 completed in 0.16 seconds with a training error of 0.0008 a validation loss of 0.0006
+
+
+Epoch 54/146 completed in 0.16 seconds with a training error of 0.0008 a validation loss of 0.0006
+
+
+Epoch 55/146 completed in 0.16 seconds with a training error of 0.0008 a validation loss of 0.0006
+
+
+Epoch 56/146 completed in 0.16 seconds with a training error of 0.0007 a validation loss of 0.0005
+
+
+Epoch 57/146 completed in 0.16 seconds with a training error of 0.0007 a validation loss of 0.0005
+
+
+Epoch 58/146 completed in 0.16 seconds with a training error of 0.0007 a validation loss of 0.0005
+
+
+Epoch 59/146 completed in 0.16 seconds with a training error of 0.0006 a validation loss of 0.0005
+
+
+Epoch 60/146 completed in 0.16 seconds with a training error of 0.0006 a validation loss of 0.0005
+
+
+Epoch 61/146 completed in 0.16 seconds with a training error of 0.0006 a validation loss of 0.0004
+
+
+Epoch 62/146 completed in 0.16 seconds with a training error of 0.0006 a validation loss of 0.0004
+
+
+Epoch 63/146 completed in 0.16 seconds with a training error of 0.0005 a validation loss of 0.0004
+
+
+Epoch 64/146 completed in 0.16 seconds with a training error of 0.0005 a validation loss of 0.0004
+
+
+Epoch 65/146 completed in 0.16 seconds with a training error of 0.0005 a validation loss of 0.0004
+
+
+Epoch 66/146 completed in 0.16 seconds with a training error of 0.0005 a validation loss of 0.0004
+
+
+Epoch 67/146 completed in 0.16 seconds with a training error of 0.0005 a validation loss of 0.0003
+
+
+Epoch 68/146 completed in 0.16 seconds with a training error of 0.0005 a validation loss of 0.0003
+
+
+Epoch 69/146 completed in 0.16 seconds with a training error of 0.0004 a validation loss of 0.0003
+
+
+Epoch 70/146 completed in 0.16 seconds with a training error of 0.0004 a validation loss of 0.0003
+
+
+Epoch 71/146 completed in 0.16 seconds with a training error of 0.0004 a validation loss of 0.0003
+
+
+Epoch 72/146 completed in 0.16 seconds with a training error of 0.0004 a validation loss of 0.0003
+
+
+Epoch 73/146 completed in 0.16 seconds with a training error of 0.0004 a validation loss of 0.0003
+
+
+Epoch 74/146 completed in 0.16 seconds with a training error of 0.0004 a validation loss of 0.0003
+
+
+Epoch 75/146 completed in 0.16 seconds with a training error of 0.0004 a validation loss of 0.0003
+
+
+Epoch 76/146 completed in 0.16 seconds with a training error of 0.0004 a validation loss of 0.0003
+
+
+Epoch 77/146 completed in 0.16 seconds with a training error of 0.0003 a validation loss of 0.0003
+
+
+Epoch 78/146 completed in 0.16 seconds with a training error of 0.0003 a validation loss of 0.0003
+
+
+Epoch 79/146 completed in 0.16 seconds with a training error of 0.0003 a validation loss of 0.0002
+
+
+Epoch 80/146 completed in 0.16 seconds with a training error of 0.0003 a validation loss of 0.0002
+
+
+Epoch 81/146 completed in 0.16 seconds with a training error of 0.0003 a validation loss of 0.0002
+
+
+Epoch 82/146 completed in 0.16 seconds with a training error of 0.0003 a validation loss of 0.0002
+
+
+Epoch 83/146 completed in 0.16 seconds with a training error of 0.0003 a validation loss of 0.0002
+
+
+Epoch 84/146 completed in 0.16 seconds with a training error of 0.0003 a validation loss of 0.0002
+
+
+Epoch 85/146 completed in 0.16 seconds with a training error of 0.0003 a validation loss of 0.0002
+
+
+Epoch 86/146 completed in 0.16 seconds with a training error of 0.0003 a validation loss of 0.0002
+
+
+Epoch 87/146 completed in 0.16 seconds with a training error of 0.0003 a validation loss of 0.0002
+
+
+Epoch 88/146 completed in 0.16 seconds with a training error of 0.0003 a validation loss of 0.0002
+
+
+Epoch 89/146 completed in 0.16 seconds with a training error of 0.0003 a validation loss of 0.0002
+
+
+Epoch 90/146 completed in 0.16 seconds with a training error of 0.0003 a validation loss of 0.0002
+
+
+Epoch 91/146 completed in 0.16 seconds with a training error of 0.0003 a validation loss of 0.0002
+
+
+Epoch 92/146 completed in 0.16 seconds with a training error of 0.0002 a validation loss of 0.0002
+
+
+Epoch 93/146 completed in 0.16 seconds with a training error of 0.0002 a validation loss of 0.0002
+
+
+Epoch 94/146 completed in 0.16 seconds with a training error of 0.0002 a validation loss of 0.0002
+
+
+Epoch 95/146 completed in 0.16 seconds with a training error of 0.0002 a validation loss of 0.0002
+
+
+Epoch 96/146 completed in 0.16 seconds with a training error of 0.0002 a validation loss of 0.0002
+
+
+Epoch 97/146 completed in 0.16 seconds with a training error of 0.0002 a validation loss of 0.0002
+
+
+Epoch 98/146 completed in 0.16 seconds with a training error of 0.0002 a validation loss of 0.0002
+
+
+Epoch 99/146 completed in 0.16 seconds with a training error of 0.0002 a validation loss of 0.0002
+
+
+Epoch 100/146 completed in 0.17 seconds with a training error of 0.0002 a validation loss of 0.0002
+
+
+Epoch 101/146 completed in 0.17 seconds with a training error of 0.0002 a validation loss of 0.0002
+
+
+Epoch 102/146 completed in 0.16 seconds with a training error of 0.0002 a validation loss of 0.0002
+
+
+Epoch 103/146 completed in 0.16 seconds with a training error of 0.0002 a validation loss of 0.0002
+
+
+Epoch 104/146 completed in 0.16 seconds with a training error of 0.0002 a validation loss of 0.0002
+
+
+Epoch 105/146 completed in 0.17 seconds with a training error of 0.0002 a validation loss of 0.0002
+
+
+Epoch 106/146 completed in 0.17 seconds with a training error of 0.0002 a validation loss of 0.0001
+
+
+Epoch 107/146 completed in 0.17 seconds with a training error of 0.0002 a validation loss of 0.0001
+
+
+Epoch 108/146 completed in 0.17 seconds with a training error of 0.0002 a validation loss of 0.0001
+
+
+Epoch 109/146 completed in 0.17 seconds with a training error of 0.0002 a validation loss of 0.0001
+
+
+Epoch 110/146 completed in 0.17 seconds with a training error of 0.0002 a validation loss of 0.0001
+
+
+Epoch 111/146 completed in 0.18 seconds with a training error of 0.0002 a validation loss of 0.0001
+
+
+Epoch 112/146 completed in 0.16 seconds with a training error of 0.0002 a validation loss of 0.0001
+
+
+Epoch 113/146 completed in 0.16 seconds with a training error of 0.0002 a validation loss of 0.0001
+
+
+Epoch 114/146 completed in 0.17 seconds with a training error of 0.0002 a validation loss of 0.0001
+
+
+Epoch 115/146 completed in 0.18 seconds with a training error of 0.0002 a validation loss of 0.0001
+
+
+Epoch 116/146 completed in 0.18 seconds with a training error of 0.0002 a validation loss of 0.0001
+
+
+Epoch 117/146 completed in 0.18 seconds with a training error of 0.0002 a validation loss of 0.0001
+
+
+Epoch 118/146 completed in 0.18 seconds with a training error of 0.0002 a validation loss of 0.0001
+
+
+Epoch 119/146 completed in 0.18 seconds with a training error of 0.0002 a validation loss of 0.0001
+
+
+Epoch 120/146 completed in 0.18 seconds with a training error of 0.0002 a validation loss of 0.0001
+
+
+Epoch 121/146 completed in 0.18 seconds with a training error of 0.0002 a validation loss of 0.0001
+
+
+Epoch 122/146 completed in 0.18 seconds with a training error of 0.0001 a validation loss of 0.0001
+
+
+Epoch 123/146 completed in 0.18 seconds with a training error of 0.0001 a validation loss of 0.0001
+
+
+Epoch 124/146 completed in 0.18 seconds with a training error of 0.0001 a validation loss of 0.0001
+
+
+Epoch 125/146 completed in 0.18 seconds with a training error of 0.0001 a validation loss of 0.0001
+
+
+Epoch 126/146 completed in 0.18 seconds with a training error of 0.0001 a validation loss of 0.0001
+
+
+Epoch 127/146 completed in 0.18 seconds with a training error of 0.0001 a validation loss of 0.0001
+
+
+Epoch 128/146 completed in 0.18 seconds with a training error of 0.0001 a validation loss of 0.0001
+
+
+Epoch 129/146 completed in 0.18 seconds with a training error of 0.0001 a validation loss of 0.0001
+
+
+Epoch 130/146 completed in 0.17 seconds with a training error of 0.0001 a validation loss of 0.0001
+
+
+Epoch 131/146 completed in 0.16 seconds with a training error of 0.0001 a validation loss of 0.0001
+
+
+Epoch 132/146 completed in 0.16 seconds with a training error of 0.0001 a validation loss of 0.0001
+
+
+Epoch 133/146 completed in 0.16 seconds with a training error of 0.0001 a validation loss of 0.0001
+
+
+Epoch 134/146 completed in 0.16 seconds with a training error of 0.0001 a validation loss of 0.0001
+
+
+Epoch 135/146 completed in 0.16 seconds with a training error of 0.0001 a validation loss of 0.0001
+
+
+Epoch 136/146 completed in 0.16 seconds with a training error of 0.0001 a validation loss of 0.0001
+
+
+Epoch 137/146 completed in 0.16 seconds with a training error of 0.0001 a validation loss of 0.0001
+
+
+Epoch 138/146 completed in 0.16 seconds with a training error of 0.0001 a validation loss of 0.0001
+
+
+Epoch 139/146 completed in 0.17 seconds with a training error of 0.0001 a validation loss of 0.0001
+
+
+Epoch 140/146 completed in 0.18 seconds with a training error of 0.0001 a validation loss of 0.0001
+
+
+Epoch 141/146 completed in 0.18 seconds with a training error of 0.0001 a validation loss of 0.0001
+
+
+Epoch 142/146 completed in 0.18 seconds with a training error of 0.0001 a validation loss of 0.0001
+
+
+Epoch 143/146 completed in 0.18 seconds with a training error of 0.0001 a validation loss of 0.0001
+
+
+Epoch 144/146 completed in 0.18 seconds with a training error of 0.0001 a validation loss of 0.0001
+
+
+Epoch 145/146 completed in 0.18 seconds with a training error of 0.0001 a validation loss of 0.0001
+
+
+Epoch 146/146 completed in 0.18 seconds with a training error of 0.0001 a validation loss of 0.0001
+
+Entrenamiento completado
+
+Loss plot saved at /home/newfasant2/N101/N101-IA/Models/Classification_field_SvD_POV_5.16_SNR_5.0_1050_0samples_146ep_32bs_loss_plot.png
+
+Model saved
+
+Test Accuracy: 100.00%
+Confusion matrix saved at /home/newfasant2/N101/N101-IA/Models/Classification_field_SvD_POV_5.16_SNR_5.0_1050_0samples_146ep_32bs_confusion_matrix.png
+Tiempo por sample: 0.002472 seconds
+Error medio de test:  tensor(0.0002, device='cuda:1')
+Fin de la ejecución
+
+2025-06-27 12:08:58,743 - INFO - 
+Los argumentos son {'input_path': '/home/newfasant2/N101/N101-IA/Datasets/Reorganized/Classification_1050_0_16_f_16_d_POV_5.16_SNR_5.0', 'use_case': 'Classification', 'data_type': 'ISAR', 'num_epochs': 146}
+
+
+Using cuda:1 device, ISAR data type, Classification use case and seed 10.
+
+
+Epoch 1/146 completed in 1.12 seconds with a training error of 1.0988 a validation loss of 1.0984
+
+
+Epoch 2/146 completed in 0.89 seconds with a training error of 1.0985 a validation loss of 1.0984
+
+
+Epoch 3/146 completed in 0.90 seconds with a training error of 1.0984 a validation loss of 1.0984
+
+
+Epoch 4/146 completed in 0.89 seconds with a training error of 1.0982 a validation loss of 1.0984
+
+
+Epoch 5/146 completed in 0.90 seconds with a training error of 1.0981 a validation loss of 1.0984
+
+
+Epoch 6/146 completed in 0.89 seconds with a training error of 1.0980 a validation loss of 1.0984
+
+
+Epoch 7/146 completed in 0.90 seconds with a training error of 1.0978 a validation loss of 1.0984
+
+
+Epoch 8/146 completed in 0.89 seconds with a training error of 1.0977 a validation loss of 1.0983
+
+
+Epoch 9/146 completed in 0.90 seconds with a training error of 1.0976 a validation loss of 1.0983
+
+
+Epoch 10/146 completed in 0.89 seconds with a training error of 1.0974 a validation loss of 1.0981
+
+
+Epoch 11/146 completed in 0.89 seconds with a training error of 1.0972 a validation loss of 1.0981
+
+
+Epoch 12/146 completed in 0.89 seconds with a training error of 1.0971 a validation loss of 1.0979
+
+
+Epoch 13/146 completed in 0.89 seconds with a training error of 1.0968 a validation loss of 1.0977
+
+
+Epoch 14/146 completed in 0.89 seconds with a training error of 1.0965 a validation loss of 1.0975
+
+
+Epoch 15/146 completed in 0.89 seconds with a training error of 1.0963 a validation loss of 1.0972
+
+
+Epoch 16/146 completed in 0.89 seconds with a training error of 1.0959 a validation loss of 1.0968
+
+
+Epoch 17/146 completed in 0.89 seconds with a training error of 1.0954 a validation loss of 1.0963
+
+
+Epoch 18/146 completed in 0.89 seconds with a training error of 1.0949 a validation loss of 1.0957
+
+
+Epoch 19/146 completed in 0.89 seconds with a training error of 1.0942 a validation loss of 1.0949
+
+
+Epoch 20/146 completed in 0.89 seconds with a training error of 1.0934 a validation loss of 1.0939
+
+
+Epoch 21/146 completed in 0.89 seconds with a training error of 1.0921 a validation loss of 1.0926
+
+
+Epoch 22/146 completed in 0.89 seconds with a training error of 1.0906 a validation loss of 1.0907
+
+
+Epoch 23/146 completed in 0.89 seconds with a training error of 1.0883 a validation loss of 1.0880
+
+
+Epoch 24/146 completed in 0.89 seconds with a training error of 1.0851 a validation loss of 1.0838
+
+
+Epoch 25/146 completed in 0.89 seconds with a training error of 1.0799 a validation loss of 1.0770
+
+
+Epoch 26/146 completed in 0.89 seconds with a training error of 1.0712 a validation loss of 1.0648
+
+
+Epoch 27/146 completed in 0.89 seconds with a training error of 1.0547 a validation loss of 1.0411
+
+
+Epoch 28/146 completed in 0.89 seconds with a training error of 1.0190 a validation loss of 0.9815
+
+
+Epoch 29/146 completed in 0.90 seconds with a training error of 0.8852 a validation loss of 0.6538
+
+
+Epoch 30/146 completed in 0.89 seconds with a training error of 0.2693 a validation loss of 0.0388
+
+
+Epoch 31/146 completed in 0.89 seconds with a training error of 0.0201 a validation loss of 0.0090
+
+
+Epoch 32/146 completed in 0.89 seconds with a training error of 0.0069 a validation loss of 0.0043
+
+
+Epoch 33/146 completed in 0.89 seconds with a training error of 0.0038 a validation loss of 0.0027
+
+
+Epoch 34/146 completed in 0.89 seconds with a training error of 0.0025 a validation loss of 0.0019
+
+
+Epoch 35/146 completed in 0.89 seconds with a training error of 0.0018 a validation loss of 0.0014
+
+
+Epoch 36/146 completed in 0.89 seconds with a training error of 0.0014 a validation loss of 0.0011
+
+
+Epoch 37/146 completed in 0.89 seconds with a training error of 0.0012 a validation loss of 0.0009
+
+
+Epoch 38/146 completed in 0.89 seconds with a training error of 0.0010 a validation loss of 0.0008
+
+
+Epoch 39/146 completed in 0.89 seconds with a training error of 0.0008 a validation loss of 0.0007
+
+
+Epoch 40/146 completed in 0.89 seconds with a training error of 0.0007 a validation loss of 0.0006
+
+
+Epoch 41/146 completed in 0.89 seconds with a training error of 0.0006 a validation loss of 0.0005
+
+
+Epoch 42/146 completed in 0.89 seconds with a training error of 0.0006 a validation loss of 0.0005
+
+
+Epoch 43/146 completed in 0.89 seconds with a training error of 0.0005 a validation loss of 0.0004
+
+
+Epoch 44/146 completed in 0.89 seconds with a training error of 0.0005 a validation loss of 0.0004
+
+
+Epoch 45/146 completed in 0.89 seconds with a training error of 0.0004 a validation loss of 0.0004
+
+
+Epoch 46/146 completed in 0.89 seconds with a training error of 0.0004 a validation loss of 0.0003
+
+
+Epoch 47/146 completed in 0.89 seconds with a training error of 0.0004 a validation loss of 0.0003
+
+
+Epoch 48/146 completed in 0.89 seconds with a training error of 0.0003 a validation loss of 0.0003
+
+
+Epoch 49/146 completed in 0.89 seconds with a training error of 0.0003 a validation loss of 0.0003
+
+
+Epoch 50/146 completed in 0.89 seconds with a training error of 0.0003 a validation loss of 0.0002
+
+
+Epoch 51/146 completed in 0.89 seconds with a training error of 0.0003 a validation loss of 0.0002
+
+
+Epoch 52/146 completed in 0.89 seconds with a training error of 0.0003 a validation loss of 0.0002
+
+
+Epoch 53/146 completed in 0.89 seconds with a training error of 0.0002 a validation loss of 0.0002
+
+
+Epoch 54/146 completed in 0.89 seconds with a training error of 0.0002 a validation loss of 0.0002
+
+
+Epoch 55/146 completed in 0.89 seconds with a training error of 0.0002 a validation loss of 0.0002
+
+
+Epoch 56/146 completed in 0.89 seconds with a training error of 0.0002 a validation loss of 0.0002
+
+
+Epoch 57/146 completed in 0.89 seconds with a training error of 0.0002 a validation loss of 0.0002
+
+
+Epoch 58/146 completed in 0.89 seconds with a training error of 0.0002 a validation loss of 0.0002
+
+
+Epoch 59/146 completed in 0.89 seconds with a training error of 0.0002 a validation loss of 0.0002
+
+
+Epoch 60/146 completed in 0.89 seconds with a training error of 0.0002 a validation loss of 0.0001
+
+
+Epoch 61/146 completed in 0.90 seconds with a training error of 0.0002 a validation loss of 0.0001
+
+
+Epoch 62/146 completed in 0.89 seconds with a training error of 0.0002 a validation loss of 0.0001
+
+
+Epoch 63/146 completed in 0.89 seconds with a training error of 0.0002 a validation loss of 0.0001
+
+
+Epoch 64/146 completed in 0.89 seconds with a training error of 0.0002 a validation loss of 0.0001
+
+
+Epoch 65/146 completed in 0.89 seconds with a training error of 0.0001 a validation loss of 0.0001
+
+
+Epoch 66/146 completed in 0.89 seconds with a training error of 0.0001 a validation loss of 0.0001
+
+
+Epoch 67/146 completed in 0.89 seconds with a training error of 0.0001 a validation loss of 0.0001
+
+
+Epoch 68/146 completed in 0.89 seconds with a training error of 0.0001 a validation loss of 0.0001
+
+
+Epoch 69/146 completed in 0.90 seconds with a training error of 0.0001 a validation loss of 0.0001
+
+
+Epoch 70/146 completed in 0.90 seconds with a training error of 0.0001 a validation loss of 0.0001
+
+
+Epoch 71/146 completed in 0.89 seconds with a training error of 0.0001 a validation loss of 0.0001
+
+
+Epoch 72/146 completed in 0.89 seconds with a training error of 0.0001 a validation loss of 0.0001
+
+
+Epoch 73/146 completed in 0.89 seconds with a training error of 0.0001 a validation loss of 0.0001
+
+
+Epoch 74/146 completed in 0.89 seconds with a training error of 0.0001 a validation loss of 0.0001
+
+
+Epoch 75/146 completed in 0.89 seconds with a training error of 0.0001 a validation loss of 0.0001
+
+
+Epoch 76/146 completed in 0.89 seconds with a training error of 0.0001 a validation loss of 0.0001
+
+
+Epoch 77/146 completed in 0.89 seconds with a training error of 0.0001 a validation loss of 0.0001
+
+
+Epoch 78/146 completed in 0.89 seconds with a training error of 0.0001 a validation loss of 0.0001
+
+
+Epoch 79/146 completed in 0.89 seconds with a training error of 0.0001 a validation loss of 0.0001
+
+
+Epoch 80/146 completed in 0.89 seconds with a training error of 0.0001 a validation loss of 0.0001
+
+
+Epoch 81/146 completed in 0.89 seconds with a training error of 0.0001 a validation loss of 0.0001
+
+
+Epoch 82/146 completed in 0.89 seconds with a training error of 0.0001 a validation loss of 0.0001
+
+
+Epoch 83/146 completed in 0.89 seconds with a training error of 0.0001 a validation loss of 0.0001
+
+
+Epoch 84/146 completed in 0.89 seconds with a training error of 0.0001 a validation loss of 0.0001
+
+
+Epoch 85/146 completed in 0.89 seconds with a training error of 0.0001 a validation loss of 0.0001
+
+
+Epoch 86/146 completed in 0.89 seconds with a training error of 0.0001 a validation loss of 0.0001
+
+
+Epoch 87/146 completed in 0.89 seconds with a training error of 0.0001 a validation loss of 0.0001
+
+
+Epoch 88/146 completed in 0.89 seconds with a training error of 0.0001 a validation loss of 0.0001
+
+
+Epoch 89/146 completed in 0.89 seconds with a training error of 0.0001 a validation loss of 0.0001
+
+
+Epoch 90/146 completed in 0.89 seconds with a training error of 0.0001 a validation loss of 0.0001
+
+
+Epoch 91/146 completed in 0.89 seconds with a training error of 0.0001 a validation loss of 0.0001
+
+
+Epoch 92/146 completed in 0.89 seconds with a training error of 0.0001 a validation loss of 0.0001
+
+
+Epoch 93/146 completed in 0.89 seconds with a training error of 0.0001 a validation loss of 0.0001
+
+
+Epoch 94/146 completed in 0.89 seconds with a training error of 0.0001 a validation loss of 0.0001
+
+
+Epoch 95/146 completed in 0.89 seconds with a training error of 0.0001 a validation loss of 0.0001
+
+
+Epoch 96/146 completed in 0.89 seconds with a training error of 0.0001 a validation loss of 0.0001
+
+
+Epoch 97/146 completed in 0.89 seconds with a training error of 0.0001 a validation loss of 0.0001
+
+
+Epoch 98/146 completed in 0.89 seconds with a training error of 0.0001 a validation loss of 0.0001
+
+
+Epoch 99/146 completed in 0.89 seconds with a training error of 0.0001 a validation loss of 0.0001
+
+
+Epoch 100/146 completed in 0.89 seconds with a training error of 0.0001 a validation loss of 0.0001
+
+
+Epoch 101/146 completed in 0.90 seconds with a training error of 0.0001 a validation loss of 0.0000
+
+
+Epoch 102/146 completed in 0.89 seconds with a training error of 0.0001 a validation loss of 0.0000
+
+
+Epoch 103/146 completed in 0.89 seconds with a training error of 0.0001 a validation loss of 0.0000
+
+
+Epoch 104/146 completed in 0.89 seconds with a training error of 0.0001 a validation loss of 0.0000
+
+
+Epoch 105/146 completed in 0.90 seconds with a training error of 0.0001 a validation loss of 0.0000
+
+
+Epoch 106/146 completed in 0.89 seconds with a training error of 0.0001 a validation loss of 0.0000
+
+
+Epoch 107/146 completed in 0.89 seconds with a training error of 0.0001 a validation loss of 0.0000
+
+
+Epoch 108/146 completed in 0.90 seconds with a training error of 0.0001 a validation loss of 0.0000
+
+
+Epoch 109/146 completed in 0.89 seconds with a training error of 0.0001 a validation loss of 0.0000
+
+
+Epoch 110/146 completed in 0.89 seconds with a training error of 0.0001 a validation loss of 0.0000
+
+
+Epoch 111/146 completed in 0.89 seconds with a training error of 0.0001 a validation loss of 0.0000
+
+
+Epoch 112/146 completed in 0.89 seconds with a training error of 0.0001 a validation loss of 0.0000
+
+
+Epoch 113/146 completed in 0.89 seconds with a training error of 0.0001 a validation loss of 0.0000
+
+
+Epoch 114/146 completed in 0.89 seconds with a training error of 0.0000 a validation loss of 0.0000
+
+
+Epoch 115/146 completed in 0.89 seconds with a training error of 0.0000 a validation loss of 0.0000
+
+
+Epoch 116/146 completed in 0.89 seconds with a training error of 0.0000 a validation loss of 0.0000
+
+
+Epoch 117/146 completed in 0.89 seconds with a training error of 0.0000 a validation loss of 0.0000
+
+
+Epoch 118/146 completed in 0.89 seconds with a training error of 0.0000 a validation loss of 0.0000
+
+
+Epoch 119/146 completed in 0.89 seconds with a training error of 0.0000 a validation loss of 0.0000
+
+
+Epoch 120/146 completed in 0.89 seconds with a training error of 0.0000 a validation loss of 0.0000
+
+
+Epoch 121/146 completed in 0.89 seconds with a training error of 0.0000 a validation loss of 0.0000
+
+
+Epoch 122/146 completed in 0.89 seconds with a training error of 0.0000 a validation loss of 0.0000
+
+
+Epoch 123/146 completed in 0.89 seconds with a training error of 0.0000 a validation loss of 0.0000
+
+
+Epoch 124/146 completed in 0.89 seconds with a training error of 0.0000 a validation loss of 0.0000
+
+
+Epoch 125/146 completed in 0.89 seconds with a training error of 0.0000 a validation loss of 0.0000
+
+
+Epoch 126/146 completed in 0.89 seconds with a training error of 0.0000 a validation loss of 0.0000
+
+
+Epoch 127/146 completed in 0.89 seconds with a training error of 0.0000 a validation loss of 0.0000
+
+
+Epoch 128/146 completed in 0.89 seconds with a training error of 0.0000 a validation loss of 0.0000
+
+
+Epoch 129/146 completed in 0.89 seconds with a training error of 0.0000 a validation loss of 0.0000
+
+
+Epoch 130/146 completed in 0.89 seconds with a training error of 0.0000 a validation loss of 0.0000
+
+
+Epoch 131/146 completed in 0.89 seconds with a training error of 0.0000 a validation loss of 0.0000
+
+
+Epoch 132/146 completed in 0.89 seconds with a training error of 0.0000 a validation loss of 0.0000
+
+
+Epoch 133/146 completed in 0.89 seconds with a training error of 0.0000 a validation loss of 0.0000
+
+
+Epoch 134/146 completed in 0.89 seconds with a training error of 0.0000 a validation loss of 0.0000
+
+
+Epoch 135/146 completed in 0.89 seconds with a training error of 0.0000 a validation loss of 0.0000
+
+
+Epoch 136/146 completed in 0.89 seconds with a training error of 0.0000 a validation loss of 0.0000
+
+
+Epoch 137/146 completed in 0.89 seconds with a training error of 0.0000 a validation loss of 0.0000
+
+
+Epoch 138/146 completed in 0.89 seconds with a training error of 0.0000 a validation loss of 0.0000
+
+
+Epoch 139/146 completed in 0.89 seconds with a training error of 0.0000 a validation loss of 0.0000
+
+
+Epoch 140/146 completed in 0.89 seconds with a training error of 0.0000 a validation loss of 0.0000
+
+
+Epoch 141/146 completed in 0.89 seconds with a training error of 0.0000 a validation loss of 0.0000
+
+
+Epoch 142/146 completed in 0.89 seconds with a training error of 0.0000 a validation loss of 0.0000
+
+
+Epoch 143/146 completed in 0.89 seconds with a training error of 0.0000 a validation loss of 0.0000
+
+
+Epoch 144/146 completed in 0.89 seconds with a training error of 0.0000 a validation loss of 0.0000
+
+
+Epoch 145/146 completed in 0.89 seconds with a training error of 0.0000 a validation loss of 0.0000
+
+
+Epoch 146/146 completed in 0.89 seconds with a training error of 0.0000 a validation loss of 0.0000
+
+Entrenamiento completado
+
+Loss plot saved at /home/newfasant2/N101/N101-IA/Models/Classification_ISAR_SvD_POV_5.16_SNR_5.0_1050_0samples_146ep_32bs_loss_plot.png
+
+Model saved
+
+Test Accuracy: 100.00%
+Confusion matrix saved at /home/newfasant2/N101/N101-IA/Models/Classification_ISAR_SvD_POV_5.16_SNR_5.0_1050_0samples_146ep_32bs_confusion_matrix.png
+Tiempo por sample: 0.002779 seconds
+Error medio de test:  tensor(4.1734e-05, device='cuda:1')
+Fin de la ejecución
+
+2025-06-27 12:09:26,452 - INFO - 
+Los argumentos son {'input_path': '/home/newfasant2/N101/N101-IA/Datasets/Reorganized/Classification_1050_0_16_f_16_d_POV_5.16_SNR_5.0', 'use_case': 'Classification', 'data_type': 'field_ph_npy', 'num_epochs': 146}
+
+
+Using cuda:1 device, field_ph_npy data type, Classification use case and seed 10.
+
+
+Epoch 1/146 completed in 0.43 seconds with a training error of 1.0980 a validation loss of 1.0972
+
+
+Epoch 2/146 completed in 0.17 seconds with a training error of 1.0967 a validation loss of 1.0962
+
+
+Epoch 3/146 completed in 0.18 seconds with a training error of 1.0956 a validation loss of 1.0952
+
+
+Epoch 4/146 completed in 0.18 seconds with a training error of 1.0943 a validation loss of 1.0941
+
+
+Epoch 5/146 completed in 0.18 seconds with a training error of 1.0930 a validation loss of 1.0928
+
+
+Epoch 6/146 completed in 0.18 seconds with a training error of 1.0915 a validation loss of 1.0913
+
+
+Epoch 7/146 completed in 0.18 seconds with a training error of 1.0898 a validation loss of 1.0894
+
+
+Epoch 8/146 completed in 0.18 seconds with a training error of 1.0877 a validation loss of 1.0870
+
+
+Epoch 9/146 completed in 0.18 seconds with a training error of 1.0853 a validation loss of 1.0843
+
+
+Epoch 10/146 completed in 0.18 seconds with a training error of 1.0819 a validation loss of 1.0805
+
+
+Epoch 11/146 completed in 0.20 seconds with a training error of 1.0779 a validation loss of 1.0760
+
+
+Epoch 12/146 completed in 0.16 seconds with a training error of 1.0727 a validation loss of 1.0702
+
+
+Epoch 13/146 completed in 0.16 seconds with a training error of 1.0654 a validation loss of 1.0612
+
+
+Epoch 14/146 completed in 0.18 seconds with a training error of 1.0546 a validation loss of 1.0478
+
+
+Epoch 15/146 completed in 0.19 seconds with a training error of 1.0395 a validation loss of 1.0301
+
+
+Epoch 16/146 completed in 0.16 seconds with a training error of 1.0136 a validation loss of 0.9931
+
+
+Epoch 17/146 completed in 0.16 seconds with a training error of 0.9643 a validation loss of 0.9205
+
+
+Epoch 18/146 completed in 0.16 seconds with a training error of 0.8593 a validation loss of 0.7687
+
+
+Epoch 19/146 completed in 0.16 seconds with a training error of 0.6508 a validation loss of 0.6458
+
+
+Epoch 20/146 completed in 0.16 seconds with a training error of 0.4255 a validation loss of 0.1468
+
+
+Epoch 21/146 completed in 0.16 seconds with a training error of 0.3077 a validation loss of 0.0684
+
+
+Epoch 22/146 completed in 0.17 seconds with a training error of 0.0512 a validation loss of 0.0272
+
+
+Epoch 23/146 completed in 0.16 seconds with a training error of 0.0239 a validation loss of 0.0129
+
+
+Epoch 24/146 completed in 0.17 seconds with a training error of 0.0154 a validation loss of 0.0087
+
+
+Epoch 25/146 completed in 0.16 seconds with a training error of 0.0102 a validation loss of 0.0060
+
+
+Epoch 26/146 completed in 0.19 seconds with a training error of 0.0078 a validation loss of 0.0047
+
+
+Epoch 27/146 completed in 0.16 seconds with a training error of 0.0055 a validation loss of 0.0042
+
+
+Epoch 28/146 completed in 0.16 seconds with a training error of 0.0047 a validation loss of 0.0030
+
+
+Epoch 29/146 completed in 0.16 seconds with a training error of 0.0040 a validation loss of 0.0028
+
+
+Epoch 30/146 completed in 0.16 seconds with a training error of 0.0032 a validation loss of 0.0022
+
+
+Epoch 31/146 completed in 0.17 seconds with a training error of 0.0031 a validation loss of 0.0020
+
+
+Epoch 32/146 completed in 0.16 seconds with a training error of 0.0025 a validation loss of 0.0024
+
+
+Epoch 33/146 completed in 0.16 seconds with a training error of 0.0023 a validation loss of 0.0022
+
+
+Epoch 34/146 completed in 0.16 seconds with a training error of 0.0021 a validation loss of 0.0017
+
+
+Epoch 35/146 completed in 0.18 seconds with a training error of 0.0018 a validation loss of 0.0016
+
+
+Epoch 36/146 completed in 0.16 seconds with a training error of 0.0016 a validation loss of 0.0013
+
+
+Epoch 37/146 completed in 0.16 seconds with a training error of 0.0015 a validation loss of 0.0014
+
+
+Epoch 38/146 completed in 0.17 seconds with a training error of 0.0014 a validation loss of 0.0010
+
+
+Epoch 39/146 completed in 0.16 seconds with a training error of 0.0013 a validation loss of 0.0010
+
+
+Epoch 40/146 completed in 0.18 seconds with a training error of 0.0012 a validation loss of 0.0009
+
+
+Epoch 41/146 completed in 0.16 seconds with a training error of 0.0011 a validation loss of 0.0009
+
+
+Epoch 42/146 completed in 0.17 seconds with a training error of 0.0010 a validation loss of 0.0008
+
+
+Epoch 43/146 completed in 0.16 seconds with a training error of 0.0010 a validation loss of 0.0007
+
+
+Epoch 44/146 completed in 0.16 seconds with a training error of 0.0009 a validation loss of 0.0007
+
+
+Epoch 45/146 completed in 0.16 seconds with a training error of 0.0009 a validation loss of 0.0007
+
+
+Epoch 46/146 completed in 0.18 seconds with a training error of 0.0008 a validation loss of 0.0007
+
+
+Epoch 47/146 completed in 0.17 seconds with a training error of 0.0008 a validation loss of 0.0006
+
+
+Epoch 48/146 completed in 0.17 seconds with a training error of 0.0007 a validation loss of 0.0006
+
+
+Epoch 49/146 completed in 0.15 seconds with a training error of 0.0007 a validation loss of 0.0006
+
+
+Epoch 50/146 completed in 0.16 seconds with a training error of 0.0007 a validation loss of 0.0005
+
+
+Epoch 51/146 completed in 0.16 seconds with a training error of 0.0006 a validation loss of 0.0006
+
+
+Epoch 52/146 completed in 0.16 seconds with a training error of 0.0006 a validation loss of 0.0005
+
+
+Epoch 53/146 completed in 0.16 seconds with a training error of 0.0006 a validation loss of 0.0005
+
+
+Epoch 54/146 completed in 0.16 seconds with a training error of 0.0006 a validation loss of 0.0005
+
+
+Epoch 55/146 completed in 0.16 seconds with a training error of 0.0005 a validation loss of 0.0005
+
+
+Epoch 56/146 completed in 0.16 seconds with a training error of 0.0005 a validation loss of 0.0004
+
+
+Epoch 57/146 completed in 0.18 seconds with a training error of 0.0005 a validation loss of 0.0004
+
+
+Epoch 58/146 completed in 0.16 seconds with a training error of 0.0005 a validation loss of 0.0004
+
+
+Epoch 59/146 completed in 0.16 seconds with a training error of 0.0005 a validation loss of 0.0004
+
+
+Epoch 60/146 completed in 0.16 seconds with a training error of 0.0005 a validation loss of 0.0004
+
+
+Epoch 61/146 completed in 0.16 seconds with a training error of 0.0004 a validation loss of 0.0003
+
+
+Epoch 62/146 completed in 0.16 seconds with a training error of 0.0004 a validation loss of 0.0003
+
+
+Epoch 63/146 completed in 0.16 seconds with a training error of 0.0004 a validation loss of 0.0003
+
+
+Epoch 64/146 completed in 0.16 seconds with a training error of 0.0004 a validation loss of 0.0003
+
+
+Epoch 65/146 completed in 0.16 seconds with a training error of 0.0004 a validation loss of 0.0003
+
+
+Epoch 66/146 completed in 0.16 seconds with a training error of 0.0004 a validation loss of 0.0003
+
+
+Epoch 67/146 completed in 0.18 seconds with a training error of 0.0004 a validation loss of 0.0003
+
+
+Epoch 68/146 completed in 0.16 seconds with a training error of 0.0004 a validation loss of 0.0003
+
+
+Epoch 69/146 completed in 0.17 seconds with a training error of 0.0003 a validation loss of 0.0003
+
+
+Epoch 70/146 completed in 0.16 seconds with a training error of 0.0003 a validation loss of 0.0003
+
+
+Epoch 71/146 completed in 0.16 seconds with a training error of 0.0003 a validation loss of 0.0003
+
+
+Epoch 72/146 completed in 0.16 seconds with a training error of 0.0003 a validation loss of 0.0003
+
+
+Epoch 73/146 completed in 0.16 seconds with a training error of 0.0003 a validation loss of 0.0003
+
+
+Epoch 74/146 completed in 0.16 seconds with a training error of 0.0003 a validation loss of 0.0003
+
+
+Epoch 75/146 completed in 0.16 seconds with a training error of 0.0003 a validation loss of 0.0002
+
+
+Epoch 76/146 completed in 0.16 seconds with a training error of 0.0003 a validation loss of 0.0002
+
+
+Epoch 77/146 completed in 0.16 seconds with a training error of 0.0003 a validation loss of 0.0002
+
+
+Epoch 78/146 completed in 0.16 seconds with a training error of 0.0003 a validation loss of 0.0002
+
+
+Epoch 79/146 completed in 0.16 seconds with a training error of 0.0003 a validation loss of 0.0002
+
+
+Epoch 80/146 completed in 0.16 seconds with a training error of 0.0003 a validation loss of 0.0002
+
+
+Epoch 81/146 completed in 0.17 seconds with a training error of 0.0003 a validation loss of 0.0002
+
+
+Epoch 82/146 completed in 0.16 seconds with a training error of 0.0003 a validation loss of 0.0002
+
+
+Epoch 83/146 completed in 0.16 seconds with a training error of 0.0002 a validation loss of 0.0002
+
+
+Epoch 84/146 completed in 0.17 seconds with a training error of 0.0002 a validation loss of 0.0002
+
+
+Epoch 85/146 completed in 0.16 seconds with a training error of 0.0002 a validation loss of 0.0002
+
+
+Epoch 86/146 completed in 0.16 seconds with a training error of 0.0002 a validation loss of 0.0002
+
+
+Epoch 87/146 completed in 0.16 seconds with a training error of 0.0002 a validation loss of 0.0002
+
+
+Epoch 88/146 completed in 0.16 seconds with a training error of 0.0002 a validation loss of 0.0002
+
+
+Epoch 89/146 completed in 0.16 seconds with a training error of 0.0002 a validation loss of 0.0002
+
+
+Epoch 90/146 completed in 0.16 seconds with a training error of 0.0002 a validation loss of 0.0002
+
+
+Epoch 91/146 completed in 0.16 seconds with a training error of 0.0002 a validation loss of 0.0002
+
+
+Epoch 92/146 completed in 0.16 seconds with a training error of 0.0002 a validation loss of 0.0002
+
+
+Epoch 93/146 completed in 0.17 seconds with a training error of 0.0002 a validation loss of 0.0002
+
+
+Epoch 94/146 completed in 0.16 seconds with a training error of 0.0002 a validation loss of 0.0002
+
+
+Epoch 95/146 completed in 0.17 seconds with a training error of 0.0002 a validation loss of 0.0002
+
+
+Epoch 96/146 completed in 0.16 seconds with a training error of 0.0002 a validation loss of 0.0002
+
+
+Epoch 97/146 completed in 0.16 seconds with a training error of 0.0002 a validation loss of 0.0002
+
+
+Epoch 98/146 completed in 0.16 seconds with a training error of 0.0002 a validation loss of 0.0002
+
+
+Epoch 99/146 completed in 0.16 seconds with a training error of 0.0002 a validation loss of 0.0002
+
+
+Epoch 100/146 completed in 0.16 seconds with a training error of 0.0002 a validation loss of 0.0002
+
+
+Epoch 101/146 completed in 0.16 seconds with a training error of 0.0002 a validation loss of 0.0002
+
+
+Epoch 102/146 completed in 0.16 seconds with a training error of 0.0002 a validation loss of 0.0002
+
+
+Epoch 103/146 completed in 0.16 seconds with a training error of 0.0002 a validation loss of 0.0001
+
+
+Epoch 104/146 completed in 0.16 seconds with a training error of 0.0002 a validation loss of 0.0001
+
+
+Epoch 105/146 completed in 0.16 seconds with a training error of 0.0002 a validation loss of 0.0001
+
+
+Epoch 106/146 completed in 0.16 seconds with a training error of 0.0002 a validation loss of 0.0001
+
+
+Epoch 107/146 completed in 0.16 seconds with a training error of 0.0002 a validation loss of 0.0001
+
+
+Epoch 108/146 completed in 0.16 seconds with a training error of 0.0002 a validation loss of 0.0001
+
+
+Epoch 109/146 completed in 0.16 seconds with a training error of 0.0002 a validation loss of 0.0001
+
+
+Epoch 110/146 completed in 0.16 seconds with a training error of 0.0002 a validation loss of 0.0001
+
+
+Epoch 111/146 completed in 0.16 seconds with a training error of 0.0002 a validation loss of 0.0001
+
+
+Epoch 112/146 completed in 0.16 seconds with a training error of 0.0002 a validation loss of 0.0001
+
+
+Epoch 113/146 completed in 0.16 seconds with a training error of 0.0001 a validation loss of 0.0001
+
+
+Epoch 114/146 completed in 0.16 seconds with a training error of 0.0001 a validation loss of 0.0001
+
+
+Epoch 115/146 completed in 0.16 seconds with a training error of 0.0001 a validation loss of 0.0001
+
+
+Epoch 116/146 completed in 0.16 seconds with a training error of 0.0001 a validation loss of 0.0001
+
+
+Epoch 117/146 completed in 0.16 seconds with a training error of 0.0001 a validation loss of 0.0001
+
+
+Epoch 118/146 completed in 0.16 seconds with a training error of 0.0001 a validation loss of 0.0001
+
+
+Epoch 119/146 completed in 0.16 seconds with a training error of 0.0001 a validation loss of 0.0001
+
+
+Epoch 120/146 completed in 0.16 seconds with a training error of 0.0001 a validation loss of 0.0001
+
+
+Epoch 121/146 completed in 0.16 seconds with a training error of 0.0001 a validation loss of 0.0001
+
+
+Epoch 122/146 completed in 0.16 seconds with a training error of 0.0001 a validation loss of 0.0001
+
+
+Epoch 123/146 completed in 0.16 seconds with a training error of 0.0001 a validation loss of 0.0001
+
+
+Epoch 124/146 completed in 0.16 seconds with a training error of 0.0001 a validation loss of 0.0001
+
+
+Epoch 125/146 completed in 0.17 seconds with a training error of 0.0001 a validation loss of 0.0001
+
+
+Epoch 126/146 completed in 0.16 seconds with a training error of 0.0001 a validation loss of 0.0001
+
+
+Epoch 127/146 completed in 0.16 seconds with a training error of 0.0001 a validation loss of 0.0001
+
+
+Epoch 128/146 completed in 0.18 seconds with a training error of 0.0001 a validation loss of 0.0001
+
+
+Epoch 129/146 completed in 0.16 seconds with a training error of 0.0001 a validation loss of 0.0001
+
+
+Epoch 130/146 completed in 0.17 seconds with a training error of 0.0001 a validation loss of 0.0001
+
+
+Epoch 131/146 completed in 0.16 seconds with a training error of 0.0001 a validation loss of 0.0001
+
+
+Epoch 132/146 completed in 0.16 seconds with a training error of 0.0001 a validation loss of 0.0001
+
+
+Epoch 133/146 completed in 0.16 seconds with a training error of 0.0001 a validation loss of 0.0001
+
+
+Epoch 134/146 completed in 0.16 seconds with a training error of 0.0001 a validation loss of 0.0001
+
+
+Epoch 135/146 completed in 0.16 seconds with a training error of 0.0001 a validation loss of 0.0001
+
+
+Epoch 136/146 completed in 0.17 seconds with a training error of 0.0001 a validation loss of 0.0001
+
+
+Epoch 137/146 completed in 0.16 seconds with a training error of 0.0001 a validation loss of 0.0001
+
+
+Epoch 138/146 completed in 0.16 seconds with a training error of 0.0001 a validation loss of 0.0001
+
+
+Epoch 139/146 completed in 0.17 seconds with a training error of 0.0001 a validation loss of 0.0001
+
+
+Epoch 140/146 completed in 0.17 seconds with a training error of 0.0001 a validation loss of 0.0001
+
+
+Epoch 141/146 completed in 0.16 seconds with a training error of 0.0001 a validation loss of 0.0001
+
+
+Epoch 142/146 completed in 0.18 seconds with a training error of 0.0001 a validation loss of 0.0001
+
+
+Epoch 143/146 completed in 0.16 seconds with a training error of 0.0001 a validation loss of 0.0001
+
+
+Epoch 144/146 completed in 0.16 seconds with a training error of 0.0001 a validation loss of 0.0001
+
+
+Epoch 145/146 completed in 0.17 seconds with a training error of 0.0001 a validation loss of 0.0001
+
+
+Epoch 146/146 completed in 0.16 seconds with a training error of 0.0001 a validation loss of 0.0001
+
+Entrenamiento completado
+
+Loss plot saved at /home/newfasant2/N101/N101-IA/Models/Classification_field_ph_npy_SvD_POV_5.16_SNR_5.0_1050_0samples_146ep_32bs_loss_plot.png
+
+Model saved
+
+Test Accuracy: 100.00%
+Confusion matrix saved at /home/newfasant2/N101/N101-IA/Models/Classification_field_ph_npy_SvD_POV_5.16_SNR_5.0_1050_0samples_146ep_32bs_confusion_matrix.png
+Tiempo por sample: 0.002478 seconds
+Error medio de test:  tensor(0.0001, device='cuda:1')
+Fin de la ejecución
+
