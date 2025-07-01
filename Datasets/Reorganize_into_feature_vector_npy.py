@@ -12,18 +12,26 @@ def reorganization(scan_angle, nr_dictionary, nf, nd, datasets_path, top_folder_
     for i in nr_dictionary.values():
         total_samples += (i[1] - i[0])
         
-    for c in range(20):
+    for c in range(50):
 
         if cw == 0:
-            if snr == 0:
+            if snr == None:
                 output_path = os.path.join(datasets_path, f"Reorganized/Classification_{total_samples}_{c}_{nf}_f_{nd}_d")
+                output_csv = os.path.join(output_path, f"labels_vector_{total_samples}_{c}_{nf}_f_{nd}_d.csv")
+                output_npy = os.path.join(output_path, f"labels_vector_{total_samples}_{c}_{nf}_f_{nd}_d.npy")
             else:
                 output_path = os.path.join(datasets_path, f"Reorganized/Classification_{total_samples}_{c}_{nf}_f_{nd}_d_SNR_{snr}")
+                output_csv = os.path.join(output_path, f"labels_vector_{total_samples}_{c}_{nf}_f_{nd}_d_SNR_{snr}.csv")
+                output_npy = os.path.join(output_path, f"labels_vector_{total_samples}_{c}_{nf}_f_{nd}_d_SNR_{snr}.npy")
         else:
-            if snr == 0:
+            if snr == None:
                 output_path = os.path.join(datasets_path, f"Reorganized/Classification_{total_samples}_{c}_{nf}_f_{nd}_d_POV_{cw}")
+                output_csv = os.path.join(output_path, f"labels_vector_{total_samples}_{c}_{nf}_f_{nd}_d_POV_{cw}.csv")
+                output_npy = os.path.join(output_path, f"labels_vector_{total_samples}_{c}_{nf}_f_{nd}_d_POV_{cw}.npy")
             else:
                 output_path = os.path.join(datasets_path, f"Reorganized/Classification_{total_samples}_{c}_{nf}_f_{nd}_d_POV_{cw}_SNR_{snr}")
+                output_csv = os.path.join(output_path, f"labels_vector_{total_samples}_{c}_{nf}_f_{nd}_d_POV_{cw}_SNR_{snr}.csv")
+                output_npy = os.path.join(output_path, f"labels_vector_{total_samples}_{c}_{nf}_f_{nd}_d_POV_{cw}_SNR_{snr}.npy")
 
         if os.path.isdir(output_path):
             pass
@@ -31,7 +39,7 @@ def reorganization(scan_angle, nr_dictionary, nf, nd, datasets_path, top_folder_
             os.makedirs(output_path, exist_ok=True)
             break
 
-    assert c<20 , "Error in folder creation"
+    assert c<50 , "Error in folder creation"
 
     with open(os.path.join(output_path, f"dictionary_{total_samples}_{c}_{nf}_f_{nd}_d.json"), 'w') as json_file:
         json.dump(nr_dictionary, json_file)
@@ -100,11 +108,11 @@ def reorganization(scan_angle, nr_dictionary, nf, nd, datasets_path, top_folder_
             existing_files += 1
 
     # Save the vector as a .csv file
-    output_csv = os.path.join(output_path, f"labels_vector_{total_samples}_{c}_{nf}_f_{nd}_d.csv")
+    # output_csv = os.path.join(output_path, f"labels_vector_{total_samples}_{c}_{nf}_f_{nd}_d.csv")
     np.savetxt(output_csv, label_vector, delimiter=",", fmt="%d")
 
     # Save the vector as a .npy file
-    output_npy = os.path.join(output_path, f"labels_vector_{total_samples}_{c}_{nf}_f_{nd}_d.npy")
+    # output_npy = os.path.join(output_path, f"labels_vector_{total_samples}_{c}_{nf}_f_{nd}_d.npy")
     np.save(output_npy, label_vector)
 
     print(f"Vector de etiquetas guardado en {output_csv} y {output_npy}")
