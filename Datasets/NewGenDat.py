@@ -35,11 +35,10 @@ def main():
     parser.add_argument('-w', '--angular_width', type=float, default=20, help='Valor de la semianchura del barrido angular en grados.')
     parser.add_argument('--nd', type=int, help='Cantidad de ángulos contenidos en el ancho del barrido.')
     parser.add_argument('-d', '--scan_angle', type=str, default="theta", choices=["theta", "phi"], help='Elegir en qué ángulo se realizan los barridos.')
-    parser.add_argument('-r', '--reorganize', action='store_true', help='Enable reorganization')
-    parser.add_argument('--nr', nargs='+', type=int, help='Number of samples per geometrie to make up the reorganization folder')
+    parser.add_argument('--nr', nargs='+', type=int, default=0, help='Number of samples per geometrie to make up the reorganization folder')
     parser.add_argument('--pov', type=str, default=None, choices=["front", "left_side", "right_side", "back"], help='Which part of the object will be being looked')
     parser.add_argument('--cw', type=float, default=0, help='Value of the semi-width established for the pov cone in degrees')
-    parser.add_argument('--snr', type=float, default=0, help='Value of the signal-to-noise ratio, expressed in dB, used to add noise to the dataset.')
+    parser.add_argument('--snr', type=float, default=None, help='Value of the signal-to-noise ratio, expressed in dB, used to add noise to the dataset.')
 
     args = parser.parse_args()
 
@@ -47,12 +46,12 @@ def main():
         assert args.cw == 0 , "If there's no POV, cone width must be 0"
     
     if args.pov == None:
-        if args.snr == 0:
+        if args.snr == None:
             top_folder_path = os.path.join(args.output_path, f"Raw/Samples_{args.nf}_f_{args.nd}_d")
         else:
             top_folder_path = os.path.join(args.output_path, f"Raw/Samples_{args.nf}_f_{args.nd}_d_SNR_{args.snr}")
     else:
-        if args.snr == 0:
+        if args.snr == None:
             top_folder_path = os.path.join(args.output_path, f"Raw/Samples_{args.nf}_f_{args.nd}_d_POV_{args.pov}_{args.cw}")
         else:
             top_folder_path = os.path.join(args.output_path, f"Raw/Samples_{args.nf}_f_{args.nd}_d_POV_{args.pov}_{args.cw}_SNR_{args.snr}")
@@ -139,7 +138,7 @@ def main():
         print("\nNo samples were generated.\n")
         logging.info("\nNo samples were generated.\n")
 
-    if args.reorganize: # If reorganization is enabled (-r appears in the command line)
+    if args.nr != 0: # If reorganization is enabled (-r appears in the command line)
         print(f"\nReorganization of samples has started...\n")
         logging.info(f"\nReorganization of samples has started...\n")
 
@@ -152,5 +151,6 @@ def main():
 if __name__ == '__main__':
     main()
 
-# python NewGenDat.py -g 2_cubes_zero_two_fixed -n 3 --nd 64 --nf 64 -w 1.72 -d "phi" -f 1e10 --wf 3e8 
-# vapor55_50000_real Scaneagle_UAV_50000_real Drone_X8_quadrocopter_50000_real Agriculteur_UAV_real 
+# python NewGenDat.py -g 2_cubes_zero_two_fixed -n 0 --nd 64 --nf 64 -w 1.72 -d "phi" -f 1e10 --wf 3e8 --pov front --cw 5.16 --snr 10
+# vapor55_50000_real Scaneagle_UAV_50000_real Drone_X8_quadrocopter_50000_real Agriculteur_UAV_real Glider_1_real Mehmet_UAV_real
+# nohup python NewGenDat.py -g -n 500 --nd 16 --nf 16 -w 1.72 -d "phi" -f 1e10 --wf 3e8 --pov front --cw 5.16 --snr 5
