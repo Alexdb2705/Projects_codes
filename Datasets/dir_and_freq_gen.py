@@ -35,7 +35,7 @@ def generate_spherical_coordinates_file(n, angle, width, m, cone_width, filename
     """
 
     def pov_angles(pov, cw):
-        povs = {"front": (90, 0), "left_side": (90, 90), "right_side": (90, 270), "back": (90, 180)}
+        povs = {"front": (90, 0), "left_side": (90, 90), "right_side": (90, 270), "back": (90, 180), "top": (1, 1), "bottom": (180, 1)}
         general = cw * (np.random.rand() * 2 - 1)
         return (general + povs[pov][0]) * np.pi/180, (general + povs[pov][1]) * np.pi/180
 
