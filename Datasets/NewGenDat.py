@@ -36,7 +36,7 @@ def main():
     parser.add_argument('--nd', type=int, help='Cantidad de ángulos contenidos en el ancho del barrido.')
     parser.add_argument('-d', '--scan_angle', type=str, default="theta", choices=["theta", "phi"], help='Elegir en qué ángulo se realizan los barridos.')
     parser.add_argument('--nr', nargs='+', type=int, default=0, help='Number of samples per geometrie to make up the reorganization folder')
-    parser.add_argument('--pov', type=str, default=None, choices=["front", "left_side", "right_side", "back"], help='Which part of the object will be being looked')
+    parser.add_argument('--pov', type=str, default=None, choices=["front", "left_side", "right_side", "back", "top", "bottom"], help='Which part of the object will be being looked')
     parser.add_argument('--cw', type=float, default=0, help='Value of the semi-width established for the pov cone in degrees')
     parser.add_argument('--snr', type=float, default=None, help='Value of the signal-to-noise ratio, expressed in dB, used to add noise to the dataset.')
 
